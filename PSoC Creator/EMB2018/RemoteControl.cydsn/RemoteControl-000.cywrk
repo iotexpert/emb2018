@@ -2,16 +2,14 @@
 <CyXmlSerializer>
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
-<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="emb2018" persistent="emb2018.cywrk" platform="NOT_USED">
-<current_project name=".\RemoteControl.cydsn\RemoteControl.cyprj" />
+<CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="RemoteControl-000" persistent="RemoteControl-000.cywrk" platform="NOT_USED">
+<current_project name=".\RemoteControl.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
-<v>.\EW2018_Accel_Final.cydsn\EW2018_Accel_Final.cyprj</v>
-<v>.\Main-Controller-Final.cydsn\Main-Controller-Final.cyprj</v>
-<v>.\RemoteControl.cydsn\RemoteControl.cyprj</v>
+<v>.\RemoteControl.cyprj</v>
 </projects>
-<workspace_id v="806153a6-b75b-43d3-85e5-e18a05860d51" />
+<workspace_id v="c5e41d90-33cb-49b6-bd1d-e5d1ab4bcd34" />
 <WriteAppVersionLastSavedWith v="4.2.0.637" />
 <WriteAppMarketingVersionLastSavedWith v="4.2 Nightly Build 637" />
 <CyGuid_dcbd9771-0334-43dc-9cc3-fe99dc3c5316 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize+CyPrjDependencyList" version="4">
