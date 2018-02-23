@@ -66,6 +66,8 @@ void aws_start( void )
 {
 	wiced_result_t ret = WICED_SUCCESS;
 
+	WPRINT_APP_INFO(("Starting AWS\n"));
+
 	//wiced_init( );
 
 	/* Disable roaming to other access points */
