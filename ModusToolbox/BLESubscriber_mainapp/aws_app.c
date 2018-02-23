@@ -14,16 +14,6 @@
  *                      Macros
  ******************************************************/
 
-#define RUN_COMMAND_PRINT_STATUS_AND_BREAK_ON_ERROR( command, ok_message, error_message )   \
-		{                                                                                   \
-	ret = (command);                                                                \
-	print_status( ret, (const char *)ok_message, (const char *)error_message );\
-	if ( ret != WICED_SUCCESS ) return;                                              \
-		}
-
-/* Set one of these MACROS based on the desired role for this AWS application. */
-#define AWS_IOT_MODE_PUBLISHER
-//#define AWS_IOT_MODE_SUBSCRIBER
 
 /******************************************************
  *                    Constants
@@ -45,21 +35,17 @@
  *               Function Declarations
  ******************************************************/
 
-static void print_status( wiced_result_t restult, const char * ok_message, const char * error_message );
-
 static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type, void *data1 );
+static wiced_result_t aws_init();
 
 /******************************************************
  *               Variable Definitions
  ******************************************************/
 static wiced_aws_data_callback_t callbacks = aws_data_callback;
-static     wiced_aws_security_t security;
+static wiced_aws_security_t security;
+static wiced_aws_app_info_t app_info;
+static wiced_aws_connect_t connection_parameters;
 
-/******************************************************
- *               Function Definitions
- ******************************************************/
-
-wiced_result_t aws_init();
 
 
 void aws_start( void )
@@ -67,29 +53,20 @@ void aws_start( void )
 	wiced_result_t ret = WICED_SUCCESS;
 
 	WPRINT_APP_INFO(("Starting AWS\n"));
-
-	//wiced_init( );
-
 	/* Disable roaming to other access points */
 	wiced_wifi_set_roam_trigger( -99 ); /* -99dBm ie. extremely low signal level */
 
 	/* Bring up the network interface */
-	ret = wiced_network_up( WICED_STA_INTERFACE, WICED_USE_EXTERNAL_DHCP_SERVER, NULL );
-	if ( ret != WICED_SUCCESS )
-	{
+	do {
+		ret = wiced_network_up( WICED_STA_INTERFACE, WICED_USE_EXTERNAL_DHCP_SERVER, NULL );
 		WPRINT_APP_INFO( ( "\nNot able to join the requested AP\n\n" ) );
-		return;
-	}
+	} while (ret != WICED_SUCCESS);
 
 	aws_init();
 }
 
 
-
-wiced_aws_app_info_t app_info;
-wiced_aws_connect_t connection_parameters;
-
-wiced_result_t aws_init()
+static wiced_result_t aws_init()
 {
 	wiced_result_t ret;
 	uint32_t size_out;
@@ -102,8 +79,6 @@ wiced_result_t aws_init()
 		WPRINT_APP_INFO( ("Error in resolving DNS\n") );
 		return ret;
 	}
-
-
 
 	/* Get AWS root certificate, client certificate and private key respectively */
 	resource_get_readonly_buffer( &myaws_iot_app_DIR_resources_rootca_cer	, 0, MAX_RESOURCE_SIZE, &size_out, (const void **) &security.ca_cert );
@@ -139,11 +114,10 @@ wiced_result_t aws_init()
 
 
 	WPRINT_APP_INFO( ("[AWS] Opening connection...  ") );
-	RUN_COMMAND_PRINT_STATUS_AND_BREAK_ON_ERROR( wiced_aws_connection_open( &app_info, callbacks, &connection_parameters ), NULL, "Did you configure you broker IP address?\n" );
-
+	wiced_aws_connection_open( &app_info, callbacks, &connection_parameters );
 
 	WPRINT_APP_INFO( ("[AWS] Subscribing...") );
-	RUN_COMMAND_PRINT_STATUS_AND_BREAK_ON_ERROR( wiced_aws_subscribe( &app_info, WICED_TOPIC , WICED_MQTT_QOS_DELIVER_AT_MOST_ONCE ), NULL, NULL );
+	wiced_aws_subscribe( &app_info, WICED_TOPIC , WICED_MQTT_QOS_DELIVER_AT_MOST_ONCE );
 
 	return WICED_SUCCESS;
 }
@@ -152,36 +126,6 @@ wiced_result_t aws_init()
 /******************************************************
  *               Static Function Definitions
  ******************************************************/
-
-/*
- * A simple result log function
- */
-static void print_status( wiced_result_t result, const char * ok_message, const char * error_message )
-{
-	if ( result == WICED_SUCCESS )
-	{
-		if ( ok_message != NULL )
-		{
-			WPRINT_APP_INFO( ( "OK (%s)\n\n", (ok_message)) );
-		}
-		else
-		{
-			WPRINT_APP_INFO( ( "OK.\n\n" ) );
-		}
-	}
-	else
-	{
-		if ( error_message != NULL )
-		{
-			WPRINT_APP_INFO( ( "ERROR (%s)\n\n", (error_message)) );
-		}
-		else
-		{
-			WPRINT_APP_INFO( ( "ERROR.\n\n" ) );
-		}
-	}
-}
-
 static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type ,void *data )
 {
 	wiced_aws_data_info_t *msg = (wiced_aws_data_info_t *) data;
@@ -196,19 +140,13 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 	{
 		WPRINT_APP_INFO( ( "[AWS] Received %.*s  for TOPIC : %.*s  len=%d\n\n", (int) msg->data_len, msg->data, (int) msg->topic_len, msg->topic, msg->data_len ) );
 
-		WPRINT_APP_INFO(("0 char = *%c*\n",msg->data[0]));
-		WPRINT_APP_INFO(("1 char = *%c*\n",msg->data[1]));
-
+		// This is beyond hard coded... if I catch you doing this... bad bad bad
 		if(msg->data_len >= 6 && msg->data[0] == 'M' && (msg->data[1]  == '1' || msg->data[1] == '2')) // || msg->data[1] == '2'))
 		{
-			WPRINT_APP_INFO(("Found a motor message\n"));
-			sscanf(&msg->data[5],"%2X",&val);
-			WPRINT_APP_INFO(("Val = %2X\n",val));
-
+			sscanf(&msg->data[5],"%2X",&val); // Pure unadulterated evil....
 			switch(msg->data[1])
 			{
 			case '1':
-
 			    hello_client_write_motor_m1(val);
 			    break;
 
@@ -219,10 +157,7 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 			default:
 				break;
 			}
-
 		}
-
-
 	}
 	break;
 	case WICED_AWS_EVENT_TYPE_CONNECT_REQ_STATUS:

@@ -2,24 +2,6 @@
  * $ Copyright Cypress Semiconductor $
  */
 
-/** @file
- *
- * This is a very simple BLE Peripheral
- * The Peripheral advertises until it is connected
- * Then it responds to read and write requests to the GATT Database
- *
- * You should add to the GATT Database
- * - defining your custom handles in simple_ble_peri_db_tags (simple_ble_peri.h)
- * - creating a place to store the data in host_info_t
- * - adding the fields to the GATT Database by updating gatt_user_attributes
- * - adding the fields to the GATT Database by updating simple_ble_peri_gatt_database
- *
- *  You should update the advertising packet
- *  You should deal with writes in simple_ble_peri_gatt_server_write_request_handler
- *  You can optionally deal with read in simple_ble_peri_gatt_server_read_request_handler
- */
-
-
 #include <string.h>
 
 #include "wiced_bt_dev.h"
@@ -36,6 +18,11 @@
 #include "wwd_debug.h"
 
 #include "ble_event_map.h"
+#include "aws_app.h"
+
+// Activate this macro to follow the Function prints
+//#define FUNCTION_PRINT(args) WPRINT_MACRO(args)
+#define FUNCTION_PRINT(args)
 
 /******************************************************************************
  *                                Constants
@@ -45,17 +32,12 @@
  *                           Function Prototypes
  ******************************************************************************/
 static void                     simple_ble_peri_application_init                   ( void );
-static wiced_bt_gatt_status_t   simple_ble_peri_gatts_connection_status_handler    ( wiced_bt_gatt_connection_status_t *p_status );
-static wiced_bt_gatt_status_t   simple_ble_peri_gatts_connection_up                ( wiced_bt_gatt_connection_status_t *p_status );
-static wiced_bt_gatt_status_t   simple_ble_peri_gatts_connection_down              ( wiced_bt_gatt_connection_status_t *p_status );
 static wiced_result_t           simple_ble_peri_management_callback                ( wiced_bt_management_evt_t event, wiced_bt_management_evt_data_t *p_event_data );
 static wiced_bt_gatt_status_t   simple_ble_peri_gatts_callback                     ( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data);
 static wiced_bt_gatt_status_t   simple_ble_peri_gatt_server_read_request_handler   ( uint16_t conn_id, wiced_bt_gatt_read_t * p_read_data );
 static wiced_bt_gatt_status_t   simple_ble_peri_gatt_server_write_request_handler  ( uint16_t conn_id, wiced_bt_gatt_write_t * p_data );
 static void                     simple_ble_peri_set_advertisement_data             ( void );
 
-
-void robot_publish(char *message);
 
 /******************************************************************************
  *                                Structures
@@ -162,10 +144,14 @@ PRIMARY_SERVICE_UUID128( HANDLE_MOTOR_SERVICE, UUID_MOTOR_SERVICE ),
 void application_start( void )
 {
     wiced_init();
-    WPRINT_BT_APP_INFO( ( "---------FCN: application_start\n" ) );
+    WPRINT_APP_INFO( ( "--------- Started BLE Peripheral & BLE Publisher ----------\n" ) );
 
     /* Register call back and configuration with stack */
     wiced_bt_stack_init( simple_ble_peri_management_callback ,  &wiced_bt_cfg_settings, wiced_bt_cfg_buf_pools );
+
+    // Turn on the red and turn the green off
+    wiced_gpio_output_low(WICED_LED1);
+    wiced_gpio_output_high(WICED_LED2);
 
     aws_start();
 }
@@ -176,41 +162,30 @@ void application_start( void )
  */
 static void simple_ble_peri_application_init( void )
 {
-    wiced_bt_gatt_status_t gatt_status;
-    wiced_result_t         result;
-
-    WPRINT_BT_APP_INFO( ( "---------FCN: simple_ble_peri_application_init\n" ) );
+    FUNCTION_PRINT( ( "---------FCN: simple_ble_peri_application_init\n" ) );
 
     /* Register with stack to receive GATT callback */
-    gatt_status = wiced_bt_gatt_register( simple_ble_peri_gatts_callback );
-
-    WPRINT_BT_APP_INFO(( "wiced_bt_gatt_register: %d\n", gatt_status ));
+    wiced_bt_gatt_register( simple_ble_peri_gatts_callback );
 
     /*  Tell stack to use our GATT database */
-    gatt_status =  wiced_bt_gatt_db_init( simple_ble_peri_gatt_database, sizeof( simple_ble_peri_gatt_database ) );
-
-    WPRINT_BT_APP_INFO( ( "wiced_bt_gatt_db_init %d\n", gatt_status ) );
+    wiced_bt_gatt_db_init( simple_ble_peri_gatt_database, sizeof( simple_ble_peri_gatt_database ) );
 
     /* Set the advertising parameters and make the device discoverable */
     simple_ble_peri_set_advertisement_data();
 
-    result =  wiced_bt_start_advertisements( BTM_BLE_ADVERT_UNDIRECTED_HIGH, 0, NULL );
-
-    WPRINT_BT_APP_INFO( ("called wiced_bt_start_advertisements %d\n", result ) );
+    wiced_bt_start_advertisements( BTM_BLE_ADVERT_UNDIRECTED_HIGH, 0, NULL );
 
 }
 
 /*
  * Setup advertisement data with 16 byte UUID and device name
  */
-void simple_ble_peri_set_advertisement_data(void)
+static void simple_ble_peri_set_advertisement_data(void)
 {
-	WPRINT_APP_INFO(("---------FCN: simple_ble_peri_set_advertisement_data\n"));
-    wiced_result_t              result;
-    wiced_bt_ble_advert_elem_t  adv_elem[3];
+	FUNCTION_PRINT(("---------FCN: simple_ble_peri_set_advertisement_data\n"));
+    wiced_bt_ble_advert_elem_t  adv_elem[3]; // Be Careful here... if you overwrite this array bad things can happen
     uint8_t ble_advertisement_flag_value        = BTM_BLE_GENERAL_DISCOVERABLE_FLAG | BTM_BLE_BREDR_NOT_SUPPORTED;
     uint8_t num_elem                            = 0;
-
     uint8_t motor_service_uuid[LEN_UUID_128]    = { UUID_MOTOR_SERVICE };
 
     adv_elem[num_elem].advert_type  = BTM_BLE_ADVERT_TYPE_FLAG;
@@ -220,7 +195,6 @@ void simple_ble_peri_set_advertisement_data(void)
 
     adv_elem[num_elem].advert_type  = BTM_BLE_ADVERT_TYPE_NAME_COMPLETE;
     adv_elem[num_elem].len          = strlen((const char *)wiced_bt_cfg_settings.device_name);
-    WPRINT_BT_APP_INFO( ("wiced_bt_cfg_settings.device_name:%s\n", wiced_bt_cfg_settings.device_name));
     adv_elem[num_elem].p_data       = (uint8_t *)wiced_bt_cfg_settings.device_name;
     num_elem++;
 
@@ -228,11 +202,7 @@ void simple_ble_peri_set_advertisement_data(void)
     adv_elem[num_elem].len          = LEN_UUID_128;
     adv_elem[num_elem].p_data       = motor_service_uuid;
     num_elem ++;
-
-
-    result = wiced_bt_ble_set_raw_advertisement_data( num_elem, adv_elem );
-
-    WPRINT_BT_APP_INFO( ( "wiced_bt_ble_set_advertisement_data %d\n", result ) );
+    wiced_bt_ble_set_raw_advertisement_data( num_elem, adv_elem );
 }
 
 
@@ -244,7 +214,7 @@ static wiced_result_t simple_ble_peri_management_callback( wiced_bt_management_e
 	wiced_result_t                   result = WICED_BT_SUCCESS;
 	wiced_bt_ble_advert_mode_t*      p_mode;
 
-	WPRINT_BT_APP_INFO(("---------FCN: simple_ble_peri_management_callback: 0x%x=%s\n", event,getEventEnumBTM(event) ));
+	FUNCTION_PRINT(("---------FCN: simple_ble_peri_management_callback: 0x%x=%s\n", event,getEventEnumBTM(event) ));
 
 	switch( event )
 	{
@@ -255,7 +225,7 @@ static wiced_result_t simple_ble_peri_management_callback( wiced_bt_management_e
 
 	case BTM_BLE_ADVERT_STATE_CHANGED_EVT:
 		p_mode = &p_event_data->ble_advert_state_changed;
-		WPRINT_BT_APP_INFO(( "Advertisement State Change: %s = %d \n", getEventEnumBTM_BLE_ADVERT(*p_mode),*p_mode));
+		FUNCTION_PRINT(( "Advertisement State Change: %s = %d \n", getEventEnumBTM_BLE_ADVERT(*p_mode),*p_mode));
 		if ( *p_mode == BTM_BLE_ADVERT_OFF )
 		{
 			if (simple_ble_peri_state.conn_id == 0)
@@ -275,7 +245,7 @@ static wiced_result_t simple_ble_peri_management_callback( wiced_bt_management_e
  */
 static attribute_t * simple_ble_peri_get_attribute( uint16_t handle )
 {
-	WPRINT_BT_APP_INFO(("---------FCN: simple_ble_peri_get_attribute Handle=%X\n",handle ));
+	FUNCTION_PRINT(("---------FCN: simple_ble_peri_get_attribute Handle=%X\n",handle ));
 
     int i;
     for ( i = 0; i <  sizeof( gatt_user_attributes ) / sizeof( gatt_user_attributes[0] ); i++ )
@@ -294,7 +264,7 @@ static attribute_t * simple_ble_peri_get_attribute( uint16_t handle )
  */
 static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_read_request_handler( uint16_t conn_id, wiced_bt_gatt_read_t * p_read_data )
 {
-	WPRINT_BT_APP_INFO(("---------FCN: simple_ble_peri_gatt_server_read_request_handler Read Handle=0x%X\n", p_read_data->handle ));
+	FUNCTION_PRINT(("---------FCN: simple_ble_peri_gatt_server_read_request_handler Read Handle=0x%X\n", p_read_data->handle ));
     attribute_t *puAttribute;
     int          attr_len_to_copy;
 
@@ -341,28 +311,25 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_write_request_handler(
 	char buff[128];
     wiced_bt_gatt_status_t result    = WICED_BT_GATT_SUCCESS;
     uint8_t                *p_attr   = p_data->p_val;
-//    uint8_t attribute_value = *(uint8_t *) p_data->p_val;
 
-    WPRINT_BT_APP_INFO(("---------FCN: write_handler: conn_id:%d hdl:0x%x prep:%d offset:%d len:%d\n ", conn_id, p_data->handle, p_data->is_prep, p_data->offset, p_data->val_len
+    FUNCTION_PRINT(("---------FCN: write_handler: conn_id:%d hdl:0x%x prep:%d offset:%d len:%d\n ", conn_id, p_data->handle, p_data->is_prep, p_data->offset, p_data->val_len
     ));
 
     switch ( p_data->handle )
     {
 
     case HANDLE_MOTOR_M1_VAL:
-    		WPRINT_BT_APP_INFO(("Wrote M1=%02X\r\n",p_attr[0]));
+    		FUNCTION_PRINT(("BLE GATT Wrote M1=%02X\r\n",p_attr[0]));
     		simple_ble_peri_hostinfo.m1 = p_attr[0];
     		sprintf(buff,"M1=0x%02X",p_attr[0]);
     		robot_publish(buff);
     		break;
 
-
     case HANDLE_MOTOR_M2_VAL:
-    		WPRINT_BT_APP_INFO(("Wrote M2=%02X\r\n",p_attr[0]));
+    		FUNCTION_PRINT(("BLE GATT Wrote M2=%02X\r\n",p_attr[0]));
     		simple_ble_peri_hostinfo.m1 = p_attr[0];
     		sprintf(buff,"M2=0x%02X",p_attr[0]);
     		robot_publish(buff);
-
     		break;
 
     default:
@@ -375,9 +342,7 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_write_request_handler(
 /* This function is invoked when connection is established */
 static wiced_bt_gatt_status_t simple_ble_peri_gatts_connection_up( wiced_bt_gatt_connection_status_t *p_status )
 {
-
-    WPRINT_BT_APP_INFO( ( "---------FCN: simple_ble_peri_gatts_connection_up  id:%d\n", p_status->conn_id) );
-
+	FUNCTION_PRINT( ( "---------FCN: simple_ble_peri_gatts_connection_up  id:%d\n", p_status->conn_id) );
     /* Update the connection handler.  Save address of the connected device. */
     simple_ble_peri_state.conn_id = p_status->conn_id;
     memcpy(simple_ble_peri_state.remote_addr, p_status->bd_addr, sizeof(BD_ADDR));
@@ -385,6 +350,9 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatts_connection_up( wiced_bt_gatt
     /* Stop advertising */
     wiced_bt_start_advertisements( BTM_BLE_ADVERT_OFF, 0, NULL );
 
+    // Turn on the red and turn the green off
+    wiced_gpio_output_high(WICED_LED1);
+    wiced_gpio_output_low(WICED_LED2);
 
     return WICED_BT_GATT_SUCCESS;
 }
@@ -395,34 +363,20 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatts_connection_up( wiced_bt_gatt
 static wiced_bt_gatt_status_t simple_ble_peri_gatts_connection_down( wiced_bt_gatt_connection_status_t *p_status )
 {
     wiced_result_t result;
-
-    WPRINT_BT_APP_INFO( ( "---------FCN: simple_ble_peri_gatts_connection_down  conn_id:%d reason:%d\n", p_status->conn_id, p_status->reason ) );
+    FUNCTION_PRINT( ( "---------FCN: simple_ble_peri_gatts_connection_down  conn_id:%d reason:%d\n", p_status->conn_id, p_status->reason ) );
 
     /* Resetting the device info */
     memset( simple_ble_peri_state.remote_addr, 0, 6 );
     simple_ble_peri_state.conn_id = 0;
 
-    result =  wiced_bt_start_advertisements( BTM_BLE_ADVERT_UNDIRECTED_LOW, 0, NULL );
-    WPRINT_BT_APP_INFO( ( "wiced_bt_start_advertisements %d\n", result ) );
+    result =  wiced_bt_start_advertisements( BTM_BLE_ADVERT_UNDIRECTED_HIGH, 0, NULL );
+    WPRINT_BT_APP_INFO( ( "Restarting Advertisements %d\n", result ) );
 
+    // Turn on the red and turn the green off
+    wiced_gpio_output_low(WICED_LED1);
+    wiced_gpio_output_high(WICED_LED2);
 
     return WICED_BT_SUCCESS;
-}
-
-/*
- * Connection up/down event
- */
-static wiced_bt_gatt_status_t simple_ble_peri_gatts_connection_status_handler( wiced_bt_gatt_connection_status_t *p_status )
-{
-	WPRINT_BT_APP_INFO(("---------FCN: simple_ble_peri_gatts_connection_status_handler\n"));
-
- //   is_connected = p_status->connected;
-    if ( p_status->connected )
-    {
-        return simple_ble_peri_gatts_connection_up( p_status );
-    }
-
-    return simple_ble_peri_gatts_connection_down( p_status );
 }
 
 /*
@@ -432,7 +386,7 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_request_handler( wiced
 {
 	wiced_bt_gatt_status_t result = WICED_BT_GATT_INVALID_PDU;
 
-	WPRINT_BT_APP_INFO(( "---------FCN: simple_ble_peri_gatt_server_request_handler. conn %d, type %d %s\n", p_data->conn_id, p_data->request_type,getEventEnumGATTS_REQ(p_data->request_type) ));
+	FUNCTION_PRINT(( "---------FCN: simple_ble_peri_gatt_server_request_handler. conn %d, type %d %s\n", p_data->conn_id, p_data->request_type,getEventEnumGATTS_REQ(p_data->request_type) ));
 
 	switch ( p_data->request_type )
 	{
@@ -445,11 +399,10 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_request_handler( wiced
 		break;
 
 	case GATTS_REQ_TYPE_MTU:
-		WPRINT_BT_APP_INFO(("Requested MTU: %d\n", p_data->data.mtu));
+		FUNCTION_PRINT(("Requested MTU: %d\n", p_data->data.mtu));
 		break;
 
 	default:
-
 		break;
 	}
 	return result;
@@ -461,25 +414,25 @@ static wiced_bt_gatt_status_t simple_ble_peri_gatt_server_request_handler( wiced
  */
 static wiced_bt_gatt_status_t simple_ble_peri_gatts_callback( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data)
 {
-
-	WPRINT_BT_APP_INFO(("---------FCN: simple_ble_peri_gatts_callback EVT=%s\n",getEventEnumGATT(event)));
+	FUNCTION_PRINT(("---------FCN: simple_ble_peri_gatts_callback EVT=%s\n",getEventEnumGATT(event)));
 
 	wiced_bt_gatt_status_t result = WICED_BT_GATT_INVALID_PDU;
 
 	switch(event)
 	{
 	case GATT_CONNECTION_STATUS_EVT:
-		result = simple_ble_peri_gatts_connection_status_handler( &p_data->connection_status );
+		if (p_data->connection_status.connected)
+			result = simple_ble_peri_gatts_connection_up( &p_data->connection_status );
+		else
+		    result = simple_ble_peri_gatts_connection_down( &p_data->connection_status );
 		break;
 
 	case GATT_ATTRIBUTE_REQUEST_EVT:
 		result = simple_ble_peri_gatt_server_request_handler( &p_data->attribute_request );
 		break;
 	default:
-
 		break;
 	}
-
 	return result;
 }
 

@@ -1,0 +1,7 @@
+#ifndef AWS_APP_H
+#define AWS_APP_H
+
+void aws_start(void);
+void robot_publish(char *message);
+
+#endif

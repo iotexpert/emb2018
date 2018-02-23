@@ -1,1 +1,31 @@
-.metadata
+# Build output directories
+**/Debug/
+**/Release/
+
+# Eclipse .metadata isn't generally safe to save in source code control...
+# ... but we do want to include launch configurations so we jump through some hoops.
+/workspace/.metadata/*
+!/workspace/.metadata/.plugins/
+/workspace/.metadata/.plugins/*
+!/workspace/.metadata/.plugins/org.eclipse.debug.core/
+/workspace/.metadata/.plugins/org.eclipse.debug.core/*
+!/workspace/.metadata/.plugins/org.eclipse.debug.core/.launches/
+
+# Generated .gdbinit (it's contents are developer and platform specific)
+.gdbinit
+
+# Generated make dependencies
+*.d
+
+# Build recipe is placing some silly files in the _mainapp directory.
+**/*_mainapp/*_mainapp.bin
+**/*_mainapp/example.xml
+
+# Build recipe is placing some silly files in the top-level _resources directory.
+**/*_resources/filesystem.bin
+**/*_resources/staging/
+
+
+# Vi/Emacs text editor detritus 
+.*.sw*
+*~
