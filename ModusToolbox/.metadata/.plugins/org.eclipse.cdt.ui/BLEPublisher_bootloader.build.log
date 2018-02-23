@@ -1,6 +1,6 @@
-17:35:33 **** Incremental Build of configuration Debug for project BLEPublisher_bootloader ****
+17:39:53 **** Incremental Build of configuration Debug for project BLEPublisher_bootloader ****
 "/Applications/ModusToolbox 1.0/tools/modus-shell-1.0/bin/make" -j3 all 
 make: Nothing to be done for `all'.
 
-17:35:33 Build Finished (took 364ms)
+17:39:54 Build Finished (took 367ms)
 

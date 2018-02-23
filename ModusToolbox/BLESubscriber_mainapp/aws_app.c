@@ -151,7 +151,7 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 		break;
 	case WICED_AWS_EVENT_TYPE_DATA_RECEIVED:
 	{
-		WPRINT_APP_INFO( ( "[AWS] Received %.*s  for TOPIC : %.*s  len=%d\n\n", (int) msg->data_len, msg->data, (int) msg->topic_len, msg->topic, (int)msg->data_len ) );
+		WPRINT_APP_INFO( ( "[AWS] Received %.*s  for TOPIC : %.*s  len=%d\n", (int) msg->data_len, msg->data, (int) msg->topic_len, msg->topic, (int)msg->data_len ) );
 
 		// This is beyond hard coded... if I catch you doing this... bad bad bad
 		if(msg->data_len >= 6 && msg->data[0] == 'M' && (msg->data[1]  == '1' || msg->data[1] == '2')) // || msg->data[1] == '2'))

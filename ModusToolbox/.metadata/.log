@@ -1361,3 +1361,279 @@ Created Time: 2018-02-23 17:10:54.426
 
 !ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:36:49.259
 !MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.123
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.124
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.390
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.406
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.409
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.410
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.412
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.517
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.743
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.744
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.983
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.994
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.996
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.997
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:51.998
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:52.005
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:53.889
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:53.890
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.277
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.286
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.287
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.288
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.289
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:54.336
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:58.987
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:58.988
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.544
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.554
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.556
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.556
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.557
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:39:59.672
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.324
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.326
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.691
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.704
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.706
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.707
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.708
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:00.832
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.029
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.034
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.036
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.037
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.038
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.041
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.137
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.138
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.403
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.422
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.424
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.425
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.427
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:01.511
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.202
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.203
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.429
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.440
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.442
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.443
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.445
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:02.454
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.354
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.354
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.736
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.745
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.747
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.748
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.749
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:04.794
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.400
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.400
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.849
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.861
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.862
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.863
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.864
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:09.984
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:10.588
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:40:10.589
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.787
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.802
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.804
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.805
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.806
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:05.907
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.072
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.077
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.079
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.080
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.081
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Debug") = ""
+
+!ENTRY ilg.gnumcueclipse.managedbuild.cross 4 1 2018-02-23 17:41:06.084
+!MESSAGE arm.PathEnvironmentVariable.resolveMacros("${cy_sdk_install_dir}/tools/gcc-4.9.3-1.0/bin", "Release") = ""
