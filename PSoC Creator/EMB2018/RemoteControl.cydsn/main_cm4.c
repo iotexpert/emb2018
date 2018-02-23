@@ -181,14 +181,6 @@ void customEventHandler(uint32_t event, void *eventParameter)
                 memcmp(cy_ble_customCServ [CY_BLE_CUSTOMC_MOTOR_SERVICE_INDEX].uuid,currentAdvInfo.serviceUUID,16) == 0)
             {
                    
-                
- #if 0           
-            // If it is the P6LED then make a connection and stop scanning
-            if(scanProgressParam->dataLen == P6ROBOT_ATT_LEN 
-               && strncmp(P6ROBOT_NAME,(const char *)&scanProgressParam->data[P6ROBOT_NAME_OFFET],strlen(P6ROBOT_NAME)) == 0 
-               && memcmp(cy_ble_customCServ [CY_BLE_CUSTOMC_MOTOR_SERVICE_INDEX].uuid,&scanProgressParam->data[P6ROBOT_SERVICE_OFFSET],16) == 0)
-            {
-#endif
                 printf("Found %s\r\n",P6ROBOT_NAME);
                 
                 memcpy(&connectAddr.bdAddr[0], &scanProgressParam->peerBdAddr[0] , CY_BLE_BD_ADDR_SIZE);

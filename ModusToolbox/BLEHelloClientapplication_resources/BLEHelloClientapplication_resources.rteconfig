@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <packages useAllLatestPacks="0">
+    <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1"/>
+  </packages>
+  <device Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="PSoC 62" Dfpu="SP_FPU" Dmpu="MPU" Dname="CY8C6247BZI-D54" Dvendor="Cypress:19" Pname="CortexM4" info="ARM Cortex-M4" url="http://www.keil.com/dd2/cypress/cy8c6247bzi_d54">
+    <package info="Cypress Studio WICED base support" name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+  </device>
+  <toolchain Tcompiler="GCC" Toutput="lib"/>
+  <components>
+    <component Cclass="WICED_BASE" Cgroup="includes" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="doc" name="README.txt" public="0"/>
+      <file category="doc" name="platform/README.txt" public="0"/>
+      <file category="include" name="include/" public="0"/>
+      <file category="header" name="include/default_bt_config_dct.h" public="0"/>
+      <file category="header" name="include/default_network_config_dct.h" public="0"/>
+      <file category="header" name="include/default_p2p_config_dct.h" public="0"/>
+      <file category="header" name="include/default_wifi_config_dct.h" public="0"/>
+      <file category="header" name="include/wiced.h" public="0"/>
+      <file category="header" name="include/wiced_audio.h" public="0"/>
+      <file category="header" name="include/wiced_bluetooth_result.h" public="0"/>
+      <file category="header" name="include/wiced_codec_if.h" public="0"/>
+      <file category="header" name="include/wiced_constants.h" public="0"/>
+      <file category="header" name="include/wiced_crypto.h" public="0"/>
+      <file category="header" name="include/wiced_deep_sleep.h" public="0"/>
+      <file category="header" name="include/wiced_defaults.h" public="0"/>
+      <file category="header" name="include/wiced_dtls.h" public="0"/>
+      <file category="header" name="include/wiced_easy_setup.h" public="0"/>
+      <file category="header" name="include/wiced_filesystem.h" public="0"/>
+      <file category="header" name="include/wiced_framework.h" public="0"/>
+      <file category="header" name="include/wiced_low_power.h" public="0"/>
+      <file category="header" name="include/wiced_management.h" public="0"/>
+      <file category="header" name="include/wiced_platform.h" public="0"/>
+      <file category="header" name="include/wiced_resource.h" public="0"/>
+      <file category="header" name="include/wiced_result.h" public="0"/>
+      <file category="header" name="include/wiced_rtos.h" public="0"/>
+      <file category="header" name="include/wiced_tcpip.h" public="0"/>
+      <file category="header" name="include/wiced_time.h" public="0"/>
+      <file category="header" name="include/wiced_tls.h" public="0"/>
+      <file category="header" name="include/wiced_usb.h" public="0"/>
+      <file category="header" name="include/wiced_utilities.h" public="0"/>
+      <file category="header" name="include/wiced_wifi.h" public="0"/>
+      <file category="header" name="include/wiced_wifi_deep_sleep.h" public="0"/>
+      <file category="header" name="include/wiced_xip.h" public="0"/>
+      <file category="include" name="internal/" public="0"/>
+      <file category="header" name="internal/wiced_filesystem_internal.h" public="0"/>
+      <file category="header" name="internal/wiced_internal_api.h" public="0"/>
+      <file category="include" name="platform/include/" public="0"/>
+      <file category="header" name="platform/include/elf.h" public="0"/>
+      <file category="header" name="platform/include/platform_audio.h" public="0"/>
+      <file category="header" name="platform/include/platform_bluetooth.h" public="0"/>
+      <file category="header" name="platform/include/platform_button.h" public="0"/>
+      <file category="header" name="platform/include/platform_cache_def.h" public="0"/>
+      <file category="header" name="platform/include/platform_constants.h" public="0"/>
+      <file category="header" name="platform/include/platform_dct.h" public="0"/>
+      <file category="header" name="platform/include/platform_dct_old_sdk.h" public="0"/>
+      <file category="header" name="platform/include/platform_ethernet.h" public="0"/>
+      <file category="header" name="platform/include/platform_external_memory.h" public="0"/>
+      <file category="header" name="platform/include/platform_init.h" public="0"/>
+      <file category="header" name="platform/include/platform_memory.h" public="0"/>
+      <file category="header" name="platform/include/platform_mfi.h" public="0"/>
+      <file category="header" name="platform/include/platform_nfc.h" public="0"/>
+      <file category="header" name="platform/include/platform_peripheral.h" public="0"/>
+      <file category="header" name="platform/include/platform_resource.h" public="0"/>
+      <file category="header" name="platform/include/platform_sflash_dct.h" public="0"/>
+      <file category="header" name="platform/include/platform_sleep.h" public="0"/>
+      <file category="header" name="platform/include/platform_usb.h" public="0"/>
+      <file category="header" name="platform/include/wiced_block_device.h" public="0"/>
+      <file category="include" name="MCU/" public="0"/>
+      <file category="header" name="MCU/platform_stdio.h" public="0"/>
+      <file category="header" name="MCU/wiced_apps_common.h" public="0"/>
+      <file category="header" name="MCU/wiced_dct_common.h" public="0"/>
+      <file category="header" name="MCU/wiced_waf_common.h" public="0"/>
+      <file category="header" name="MCU/wwd_platform_common.h" public="0"/>
+      <file category="include" name="platform/MIPS/" public="0"/>
+      <file category="header" name="platform/MIPS/platform_assert.h" public="0"/>
+      <file category="include" name="RTOS/" public="0"/>
+      <file category="header" name="RTOS/wiced_rtos_common.h" public="0"/>
+      <file category="include" name="WWD/include/platform/" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_bus_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_platform_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_resource_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_sdio_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_spi_interface.h" public="0"/>
+      <file category="include" name="WWD/" public="0"/>
+      <file category="include" name="WWD/include/RTOS/" public="0"/>
+      <file category="header" name="WWD/include/RTOS/wwd_rtos_interface.h" public="0"/>
+      <file category="include" name="WWD/include/" public="0"/>
+      <file category="header" name="WWD/include/wwd_assert.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_constants.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_debug.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_eapol.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_events.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_management.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_poll.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_structures.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wifi.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wifi_sleep.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wlioctl.h" public="0"/>
+      <file category="include" name="WWD/internal/" public="0"/>
+      <file category="header" name="WWD/internal/wwd_ap.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_clm.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_ap_common.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_bcmendian.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_internal.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_logging.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_sdpcm.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_thread.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_thread_internal.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_wifi_chip_common.h" public="0"/>
+      <file category="include" condition="ARM_CM4" name="platform/ARM_CM4/" public="0"/>
+      <file category="include" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/" public="0"/>
+      <file category="doc" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/CMSIS_EULA.pdf" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cm4.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cm4_simd.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cmFunc.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cmInstr.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_assert.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_checkpoint.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_isr.h" public="0"/>
+      <file category="include" condition="ARM_GNU Compiler" name="platform/GCC/" public="0"/>
+      <file category="header" condition="ARM_GNU Compiler" name="platform/GCC/linker_symbols.h" public="0"/>
+      <file category="header" condition="ARM_GNU Compiler" name="platform/GCC/platform_toolchain.h" public="0"/>
+      <file category="include" name="WWD/internal/bus_protocols/" public="0"/>
+      <file category="header" name="WWD/internal/bus_protocols/wwd_bus_protocol_interface.h" public="0"/>
+    </component>
+  </components>
+  <apis/>
+</configuration>

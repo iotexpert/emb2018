@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.ui.externaltools.ProgramBuilderLaunchConfigurationType">
+<stringAttribute key="org.eclipse.debug.core.ATTR_REFRESH_SCOPE" value="${working_set:&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;resources&gt;&#10;&lt;item path=&quot;/BLEHelloClientapplication_resources&quot; type=&quot;4&quot;/&gt;&#10;&lt;/resources&gt;}"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="false"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_LOCATION" value="${cy_tools_path:modus-shell}/bin/bash${cy_exe_platform_ext}"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_RUN_BUILD_KINDS" value="full,incremental,"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_TOOL_ARGUMENTS" value="&quot;--norc&quot; &quot;${cy_tools_path:wiced-scripts}/process_resources.bash&quot; &quot;${cy_tools_path:modus-shell}&quot; &quot;${cy_tools_path:wiced-scripts}&quot; &quot;${cy_libs_path:wiced}&quot; &quot;${workspace_loc:/BLEHelloClientapplication_mainapp}&quot;  &quot;${workspace_loc:/BLEHelloClientapplication_resources}&quot; MEM ${cy_files_list:BLEHelloClientapplication_mainapp:cyrsc} ${cy_files_list:BLEHelloClientapplication_platform:cyrsc}"/>
+<booleanAttribute key="org.eclipse.ui.externaltools.ATTR_TRIGGERS_CONFIGURED" value="true"/>
+<stringAttribute key="org.eclipse.ui.externaltools.ATTR_WORKING_DIRECTORY" value="${workspace_loc:/BLEHelloClientapplication_resources}"/>
+</launchConfiguration>

@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620" name="Debug" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postbuildStep="" prebuildStep="">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.315098661" name="ARM Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1992259669" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.1795877269" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting" useByScannerDiscovery="false"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.1852047578" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.302075156" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.none" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.342418340" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.1779918336" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1053051816" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.122852700" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.927718891" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.max" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1338810598" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.1643889503" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1232525140" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.1809332143" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.290686670" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.295833066" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1281847559" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.1415552225" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1182015159" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1721937512" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.921755922" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.183620726" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.987216839" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1289741779" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.1169036873" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.88511924" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.default" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.1828470613" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.fpv4spd16" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork.1669541327" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.2130121145" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon.544823095" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon" value="true" valueType="boolean"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.69825571" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BLEPublisher}/Debug" command="${cy_tools_path:modus-shell}/bin/make" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1576746025" name="Gnu Make Builder.Debug" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.1080091135" name="GNU ARM Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1195284687" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1669046803" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_sensor&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.24373820" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs.636358757" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="__STRICT_ANSI__"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1954198028" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.205367555" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1620779420" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_sensor&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.1664711242" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other.1666788448" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other" useByScannerDiscovery="true" value="-MD -isystem &quot;${cy_tools_path:gcc-4.9.3}/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include-fixed&quot;" valueType="string"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1434119493" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1389042810" name="GNU ARM Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.1995125662" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1613944037" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${cross_toolchain_flags} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} -Wl,--start-group ${INPUTS} -Wl,--end-group" id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.682319628" name="GNU ARM Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.380827927" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths.1745807807" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources/${ConfigName}}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_platform/${ConfigName}}&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs.707007633" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="&quot;m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;BLEPublisher_resources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;BLEPublisher_platform&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart.1318138998" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1367648496" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.967103839" name="GNU ARM Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.1716076134" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.341868986" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1158180587" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.137105808" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1263989905" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.256748660" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.354532596" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.1187879347" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1387925652" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.2031899793" name="GNU ARM Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1478148961" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986" name="Release" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release" postbuildStep="" prebuildStep="">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.1442893692" name="ARM Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.2038102800" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.708291883" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting" useByScannerDiscovery="false"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.409187386" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.518939675" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.949023998" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.255074143" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1501694776" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.1222438760" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1372373366" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1699180260" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.666030576" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1751186967" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.464743651" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1591109834" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.111255854" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1797280811" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.700427319" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.1562222691" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.840899309" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1532638933" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.1245516269" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.2067728784" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.452120073" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.383173788" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.1668989485" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.default" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.680981813" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.fpv4spd16" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork.988572903" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.764465493" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon.468641417" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon" value="true" valueType="boolean"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.1629456607" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BLEPublisher}/Release" command="${cy_tools_path:modus-shell}/bin/make" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1629264676" name="Gnu Make Builder.Release" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.2129108896" name="GNU ARM Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1076029650" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.2088248587" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_sensor&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1871130003" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs.192646605" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="__STRICT_ANSI__"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.1222160710" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.2035422503" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.589875871" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_sensor&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.1253599410" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other.1648548966" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other" useByScannerDiscovery="true" value="-MD -isystem &quot;${cy_tools_path:gcc-4.9.3}/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include-fixed&quot;" valueType="string"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1103437459" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1912094773" name="GNU ARM Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.905163763" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1192242593" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${cross_toolchain_flags} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} -Wl,--start-group ${INPUTS} -Wl,--end-group" id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.852724274" name="GNU ARM Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.668675095" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths.744192569" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_resources/${ConfigName}}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEPublisher_platform/${ConfigName}}&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs.842429586" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="&quot;m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;c&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;BLEPublisher_resources&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;BLEPublisher_platform&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart.2011823874" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.nostart" value="true" valueType="boolean"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.185106396" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.261571293" name="GNU ARM Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.797194712" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.2016141245" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1498160770" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.646738615" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1640903410" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.2013316552" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.1994983233" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.2147007113" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1520793201" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.146436729" name="GNU ARM Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1625675845" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="BLEPublisher.com.cypress.cystudio.cross.target.elf.2102704383" name="ModusToolbox Project" projectType="com.cypress.cystudio.cross.target.elf"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.377142986.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.2035422503;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1103437459">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.1662102620.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.205367555;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1434119493">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="com.arm.cmsis.project">
+		<rteConfig name="BLEPublisher.rteconfig"/>
+		<toolChainAdapter id="com.arm.cmsis.pack.build.gnuarmeclipse.toolChainAdapter" name="Cross ARM GCC Toolchain Adapter"/>
+		<device Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="PSoC 62" Dfpu="SP_FPU" Dmpu="MPU" Dname="CY8C6247BZI-D54" Dvendor="Cypress:19" Pname="CortexM4" info="ARM Cortex-M4" url="http://www.keil.com/dd2/cypress/cy8c6247bzi_d54"/>
+	</storageModule>
+	<storageModule moduleId="refreshScope"/>
+</cproject>

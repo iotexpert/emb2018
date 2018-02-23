@@ -113,7 +113,7 @@ void customEventHandler(uint32_t event, void *eventParameter)
             updateMotorsGatt(M2,getMotorPercent(M2),CY_BLE_GATT_DB_LOCALLY_INITIATED);
         break;
         
-        
+        case CY_BLE_EVT_GATTS_WRITE_CMD_REQ:
         case CY_BLE_EVT_GATTS_WRITE_REQ:
             
             writeReqParameter = (cy_stc_ble_gatts_write_cmd_req_param_t *) eventParameter;
@@ -158,12 +158,13 @@ void customEventHandler(uint32_t event, void *eventParameter)
                 
                 Cy_BLE_GATTS_WriteAttributeValueCCCD(&myWrite);
             }
-            
-            Cy_BLE_GATTS_WriteRsp(writeReqParameter->connHandle);
+            if(event == CY_BLE_EVT_GATTS_WRITE_REQ)
+                Cy_BLE_GATTS_WriteRsp(writeReqParameter->connHandle);
             break;
 
         /* Do nothing for all other events */
         default:
+            printf("Unknown event %X\n",event);
         break;
     }
 }

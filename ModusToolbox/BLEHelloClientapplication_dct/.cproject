@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<macros>
+					<stringMacro name="cybuild_cmsis_pack_root" type="VALUE_TEXT" value="${cmsis_pack_root}"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728" name="Debug" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug" postbuildStep="&quot;${cy_tools_path:modus-shell}/bin/bash${cy_exe_platform_ext}&quot; &quot;--norc&quot; &quot;${cy_tools_path:wiced-scripts}/process_elf.bash&quot; &quot;${cy_tools_path:gcc-4.9.3}/bin&quot; . &quot;${BuildArtifactFileName}&quot;" prebuildStep="&quot;${cy_tools_path:modus-shell}/bin/perl${cy_exe_platform_ext}&quot; &quot;${cy_tools_path:wiced-tools}/scripting/mac_generator/mac_generator.pl&quot;">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug.1521030168" name="ARM Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.debug">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1344617511" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.2033100803" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting" useByScannerDiscovery="false"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.127847740" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.1085368916" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.none" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.1241239252" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.596123599" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.97318667" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.368337672" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1038801818" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.max" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.1300927131" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.1194788732" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1076129875" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.1030545937" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.1686981883" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.1355554201" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.2136148124" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.2124446009" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.2118044409" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.1839630168" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1859045743" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.555713938" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.356715666" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.1948807523" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.1284843316" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.1249126817" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.default" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.2015586935" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.fpv4spd16" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork.907301822" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.531889752" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon.1618786341" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon" value="true" valueType="boolean"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.271924372" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BLEHelloClientapplication_dct}/Debug" command="${cy_tools_path:modus-shell}/bin/make" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1413164061" name="Gnu Make Builder.Debug" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.233820051" name="GNU ARM Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1224890013" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.405709416" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_client&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1703169902" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs.1999850886" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="__STRICT_ANSI__"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.2131334197" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1236776353" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.730406023" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_client&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.508583091" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other.1133125077" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other" useByScannerDiscovery="true" value="-MD -fno-common -isystem &quot;${cy_tools_path:gcc-4.9.3}/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include-fixed&quot;" valueType="string"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.315858868" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.400679658" name="GNU ARM Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.351549044" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1274067214" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${cross_toolchain_flags} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} -Wl,--start-group ${INPUTS} -Wl,--end-group" id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.1018228013" name="GNU ARM Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.554479550" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs.237903295" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="&quot;m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;c&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.scriptfile.626463768" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.scriptfile" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/GCC/cy8c6x7/dct.ld&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.other.1559492411" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.other" value="-Wl,-A,thumb -Wl,-z,max-page-size=0x10 -Wl,-z,common-page-size=0x10 -Wl,--defsym,START_STACK_SIZE=4000 -Wl,--defsym,FIQ_STACK_SIZE=0 -Wl,--defsym,IRQ_STACK_SIZE=1024 -Wl,--defsym,SYS_STACK_SIZE=0" valueType="string"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths.442732598" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${cy_tools_path:gcc-4.9.3}/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/GCC/cy8c6x7&quot;"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1840306235" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.1163683446" name="GNU ARM Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.1960570253" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1983237496" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.496042814" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1820025185" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1516706444" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.2065976758" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.2119793" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.818165091" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.608754365" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.237003688" name="GNU ARM Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1570431874" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<macros>
+					<stringMacro name="cybuild_cmsis_pack_root" type="VALUE_TEXT" value="${cmsis_pack_root}"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${ProjName}" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe,org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release" cleanCommand="${cross_rm} -rf" description="" id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312" name="Release" parent="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release" postbuildStep="&quot;${cy_tools_path:modus-shell}/bin/bash${cy_exe_platform_ext}&quot; &quot;--norc&quot; &quot;${cy_tools_path:wiced-scripts}/process_elf.bash&quot; &quot;${cy_tools_path:gcc-4.9.3}/bin&quot; . &quot;${BuildArtifactFileName}&quot;" prebuildStep="&quot;${cy_tools_path:modus-shell}/bin/perl${cy_exe_platform_ext}&quot; &quot;${cy_tools_path:wiced-tools}/scripting/mac_generator/mac_generator.pl&quot;">
+					<folderInfo id="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312." name="/" resourcePath="">
+						<toolChain id="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release.1519423451" name="ARM Cross GCC" superClass="ilg.gnuarmeclipse.managedbuild.cross.toolchain.elf.release">
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash.1735299596" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createflash" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting.1224750336" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.createlisting" useByScannerDiscovery="false"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize.584794287" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.addtools.printsize" useByScannerDiscovery="false" value="false" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.2132196369" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level" useByScannerDiscovery="true" value="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.level.size" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength.744518128" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.messagelength" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar.800537030" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.signedchar" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections.1259098135" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.functionsections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections.723879809" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.datasections" useByScannerDiscovery="true" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level.1942623803" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.level" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format.858198796" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.debugging.format" useByScannerDiscovery="true"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name.902231088" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.toolchain.name" value="GNU Tools for ARM Embedded Processors" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.1083883145" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.architecture" value="ilg.gnuarmeclipse.managedbuild.cross.option.architecture.arm" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family.649190812" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.family" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.mcpu.cortex-m4" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.267655103" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.instructionset.thumb" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix.1839688509" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.prefix" value="arm-none-eabi-" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.c.1567051521" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.c" value="gcc" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp.242683129" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.cpp" value="g++" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar.859421619" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.ar" value="ar" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy.329841543" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objcopy" value="objcopy" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump.1171962403" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.objdump" value="objdump" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.size.2134933143" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.size" value="size" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.make.994696163" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.make" value="make" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm.195302095" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.command.rm" value="rm" valueType="string"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.1882212586" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.endianness.little" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.249892667" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.abi.default" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.1508567964" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit" value="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.fpu.unit.fpv4spd16" valueType="enumerated"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork.1452977639" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.arm.target.thumbinterwork" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn.1671588286" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.warnings.allwarn" value="true" valueType="boolean"/>
+							<option id="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon.1417475454" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.optimization.nocommon" value="true" valueType="boolean"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform.637854143" isAbstract="false" osList="all" superClass="ilg.gnuarmeclipse.managedbuild.cross.targetPlatform"/>
+							<builder buildPath="${workspace_loc:/BLEHelloClientapplication_dct}/Release" command="${cy_tools_path:modus-shell}/bin/make" id="ilg.gnuarmeclipse.managedbuild.cross.builder.1134620080" name="Gnu Make Builder.Release" parallelBuildOn="true" parallelizationNumber="optimal" superClass="ilg.gnuarmeclipse.managedbuild.cross.builder"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.471726691" name="GNU ARM Cross Assembler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor.1105380054" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.usepreprocessor" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs.1045040415" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.defs" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_client&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths.1254112084" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs.465503084" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.assembler.undefs" valueType="undefDefinedSymbols">
+									<listOptionValue builtIn="false" value="__STRICT_ANSI__"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input.34620325" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.assembler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1276523975" name="GNU ARM Cross C Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs.1586144197" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="WWD_DIRECT_RESOURCES"/>
+									<listOptionValue builtIn="false" value="WICED_VERSION='&quot;Wiced_ModusToolbox_001.000.000&quot;'"/>
+									<listOptionValue builtIn="false" value="WICED_DISABLE_MCU_POWERSAVE"/>
+									<listOptionValue builtIn="false" value="HSE_VALUE=26000000"/>
+									<listOptionValue builtIn="false" value="BUS='&quot;SDIO&quot;'"/>
+									<listOptionValue builtIn="false" value="WWD_DOWNLOAD_CLM_BLOB"/>
+									<listOptionValue builtIn="false" value="BOOTLOADER_MAGIC_NUMBER=0x4d435242"/>
+									<listOptionValue builtIn="false" value="SFLASH_APPS_HEADER_LOC=0x0000"/>
+									<listOptionValue builtIn="false" value="WICED_DCT_INCLUDE_BT_CONFIG"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_image=resources_firmware_DIR_4343W_DIR_4343WA1_bin"/>
+									<listOptionValue builtIn="false" value="wifi_firmware_clm_blob=resources_firmware_DIR_4343W_DIR_4343WA1_clm_blob"/>
+									<listOptionValue builtIn="false" value="WWD_STARTUP_DELAY=10"/>
+									<listOptionValue builtIn="false" value="WWD_BUS_SDIO_AFTER_RESET_DELAY=1000"/>
+									<listOptionValue builtIn="false" value="MAX_WATCHDOG_TIMEOUT_SECONDS=2.5"/>
+									<listOptionValue builtIn="false" value="DEFAULT_SYSTEM_MONITOR_PERIOD=2500"/>
+									<listOptionValue builtIn="false" value="PLATFORM='&quot;CY8CKIT_062&quot;'"/>
+									<listOptionValue builtIn="false" value="CY8C6247BZI_D54"/>
+									<listOptionValue builtIn="false" value="APPS_CHIP_REVISION='&quot;&quot;'"/>
+									<listOptionValue builtIn="false" value="PLATFORM_POWER_DOWN_THREAD_PREEMPTION_ALLOWED"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP_FAMILY=4343W"/>
+									<listOptionValue builtIn="false" value="WLAN_CHIP=4343W"/>
+									<listOptionValue builtIn="false" value="CRLF_STDIO_REPLACEMENT"/>
+									<listOptionValue builtIn="false" value="NX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="NetX_VERSION='&quot;vver5.5_sp1&quot;'"/>
+									<listOptionValue builtIn="false" value="OPENSSL"/>
+									<listOptionValue builtIn="false" value="WICED_USE_BESL"/>
+									<listOptionValue builtIn="false" value="NETWORK_NetX=1"/>
+									<listOptionValue builtIn="false" value="SYS_TIME_H_AVAILABLE"/>
+									<listOptionValue builtIn="false" value="NXD_EXTENDED_BSD_SOCKET_SUPPORT"/>
+									<listOptionValue builtIn="false" value="BUILDCFG"/>
+									<listOptionValue builtIn="false" value="APP_NAME='&quot;ble_hello_client&quot;'"/>
+									<listOptionValue builtIn="false" value="ADD_LWIP_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="ThreadX_VERSION='&quot;v5.6&quot;'"/>
+									<listOptionValue builtIn="false" value="__fd_set_defined"/>
+									<listOptionValue builtIn="false" value="WICED_BLUETOOTH_PLATFORM"/>
+									<listOptionValue builtIn="false" value="ADD_NETX_EAPOL_SUPPORT"/>
+									<listOptionValue builtIn="false" value="STDC_HEADERS"/>
+									<listOptionValue builtIn="false" value="NX_FRAGMENT_IMMEDIATE_ASSEMBLY"/>
+									<listOptionValue builtIn="false" value="WICED_BTE_LIB"/>
+									<listOptionValue builtIn="false" value="RTOS_ThreadX=1"/>
+									<listOptionValue builtIn="false" value="TX_INCLUDE_USER_DEFINE_FILE"/>
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths.16614741" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_mainapp}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_dct}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/BLEHelloClientapplication_resources}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other.503457138" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.compiler.other" useByScannerDiscovery="true" value="-MD -fno-common -isystem &quot;${cy_tools_path:gcc-4.9.3}/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include&quot; -isystem &quot;${cy_tools_path:gcc-4.9.3}/lib/include-fixed&quot;" valueType="string"/>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1392071702" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.1231927349" name="GNU ARM Cross C++ Compiler" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.456809504" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="true" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="_RTE_"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths.1444808235" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.include.paths" useByScannerDiscovery="true" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/WAF&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/CapSense&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/cmsis/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/ip&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/NoOS/WWD/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/WWD/CM3_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/RTOS/ThreadX/ver5.6/Cortex_M3_M4/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/RTOS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/network&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/include/platform&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/WWD/internal/bus_protocols&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/DTLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/P2P&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/TLS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/WPS/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/common/proto&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/crypto_internal&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/host/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/BESL/supplicant&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/COAP/client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/DNS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/WICED&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/FileX/ver5.4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/HTTP_client&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/JSON_parser&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SMTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/SNTP&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/TLV&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/base64&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/bufmgr&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/button_manager&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/cJSON&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/crc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/gpio_button&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/linked_list&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/mini_printf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ota2&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/ring_buffer&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wiced_log&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/libs/wicedfs/src&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/network/NoNS/WWD&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/ARM_CM4/CMSIS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/GCC&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/MIPS&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platform/include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cmsis_pack_root}/Cypress/WICED_base/0.0.1/platforms/CY8CKIT_062&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}}/RTE&quot;"/>
+								</option>
+							</tool>
+							<tool commandLinePattern="${COMMAND} ${cross_toolchain_flags} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} -Wl,--start-group ${INPUTS} -Wl,--end-group" id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.595257530" name="GNU ARM Cross C Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections.1078160057" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs.268645822" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.libs" valueType="libs">
+									<listOptionValue builtIn="false" value="&quot;m&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;c&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.scriptfile.1941276592" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.scriptfile" valueType="stringList">
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/GCC/cy8c6x7/dct.ld&quot;"/>
+								</option>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.other.278006207" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.other" value="-Wl,-A,thumb -Wl,-z,max-page-size=0x10 -Wl,-z,common-page-size=0x10 -Wl,--defsym,START_STACK_SIZE=4000 -Wl,--defsym,FIQ_STACK_SIZE=0 -Wl,--defsym,IRQ_STACK_SIZE=1024 -Wl,--defsym,SYS_STACK_SIZE=0" valueType="string"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths.2110764094" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.c.linker.paths" valueType="libPaths">
+									<listOptionValue builtIn="false" value="&quot;${cy_tools_path:gcc-4.9.3}/lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${cybuild_cmsis_pack_root}/Cypress/WICED_base/0.0.1/MCU/PSoC6/GCC/cy8c6x7&quot;"/>
+								</option>
+								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input.1693508376" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker.106731129" name="GNU ARM Cross C++ Linker" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.linker">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections.1600392516" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.linker.gcsections" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver.1254003842" name="GNU ARM Cross Archiver" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.archiver"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash.1970125564" name="GNU ARM Cross Create Flash Image" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createflash"/>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting.1184062996" name="GNU ARM Cross Create Listing" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.createlisting">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source.1284751722" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.source" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders.1677803039" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.allheaders" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle.76266722" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.demangle" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers.1788341842" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.linenumbers" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide.1850580657" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.createlisting.wide" useByScannerDiscovery="false" value="true" valueType="boolean"/>
+							</tool>
+							<tool id="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize.727089394" name="GNU ARM Cross Print Size" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.printsize">
+								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format.1374855291" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.printsize.format" useByScannerDiscovery="false"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="BLEHelloClientapplication_dct.com.cypress.cystudio.cross.target.elf.2042735137" name="ModusToolbox Project" projectType="com.cypress.cystudio.cross.target.elf"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312;ilg.gnuarmeclipse.managedbuild.cross.config.elf.release.1071429312.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1276523975;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.1392071702">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728;ilg.gnuarmeclipse.managedbuild.cross.config.elf.debug.901203728.;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.1236776353;ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.315858868">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="com.arm.cmsis.project">
+		<rteConfig name="BLEHelloClientapplication_dct.rteconfig"/>
+		<toolChainAdapter id="com.arm.cmsis.pack.build.gnuarmeclipse.toolChainAdapter" name="Cross ARM GCC Toolchain Adapter"/>
+		<device Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="PSoC 62" Dfpu="SP_FPU" Dmpu="MPU" Dname="CY8C6247BZI-D54" Dvendor="Cypress:19" Pname="CortexM4" info="ARM Cortex-M4" url="http://www.keil.com/dd2/cypress/cy8c6247bzi_d54"/>
+	</storageModule>
+	<storageModule moduleId="refreshScope"/>
+</cproject>

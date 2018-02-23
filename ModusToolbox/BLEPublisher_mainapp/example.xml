@@ -1,0 +1,58 @@
+<application version="1" id="snip.ble_hello_sensor">
+  <applicationDecl>
+    <name lang="en">BLE Hello sensor application</name>
+    <description lang="en">This application demonstrates the usage of GATT services for combo chips such as 4343x/43340. The device acts as a GATT server(peripheral) and advertises as HELLO.
+	</description>
+    <solution>
+      <keyword>Wifi</keyword>
+      <keyword>ble_hello_sensor</keyword>
+      <keyword>snips</keyword>
+    </solution>
+    <variants>
+      <variant id="OSNS" >
+        <choice descr="ThreadX+NetX Duo" value="ThreadX_NetXDuo" />
+        <choice descr="ThreadX+NetX" value="ThreadX_NetX" />
+        <!-- <choice descr="FreeRTOS+LwIP" value="FreeRTOS_LwIP" /> Not building for all platforms yet -->
+      </variant>
+    </variants>
+    <sdk group="WICED SDK" minVersion="1.0.0.0"/>
+    <setVars>
+      <setVar name="GCC" value="gcc-4.9.3"/>
+    </setVars>
+    <kits>
+      <kit>NEB1DX_01</kit>
+      <kit>CY8CKIT-062-WIFI-BT</kit>
+    </kits>
+  </applicationDecl>
+  <applicationImpl>
+    <includeApplications>
+      <includeApplication>../../../../../impl/$[CyKit].xml</includeApplication>
+      <includeApplication>../../../../../impl/$[OSNS].xml</includeApplication>
+    </includeApplications>
+    <globalDefines>
+      <scope name="all"/>
+      <scope name="main">
+        <globalDefine value="ADD_LWIP_EAPOL_SUPPORT"/>
+        <globalDefine value="ADD_NETX_EAPOL_SUPPORT"/>
+        <globalDefine value="OPENSSL"/>
+        <globalDefine value="STDC_HEADERS"/>
+        <globalDefine value="BUILDCFG"/>
+        <globalDefine value="WICED_BLUETOOTH_PLATFORM"/>
+        <globalDefine value="WICED_BTE_LIB"/>
+        <globalDefine value="APP_NAME='&quot;ble_hello_sensor&quot;'"/>
+      </scope>
+    </globalDefines>
+    <cdtProject name="$[CyMasterProjectName]_mainapp">
+	<src>.</src>
+      <addComponents>
+		<component Cclass="WICED_LIB_BASE"  Cgroup="command_console" Cversion="1.0"/>
+		<component Cclass="WICED_LIB_BASE"  Cgroup="command_console_includes" Cversion="1.0"/>
+		<component Cclass="WICED_LIB_BASE"  Cgroup="wiced_log" Cversion="1.0"/>
+        <component Cclass="WICED_DRIVER_BT" Cgroup="bt_BTE" Cversion="1.0"/>
+        <component Cclass="WICED_DRIVER_BT" Cgroup="bt_include" Cversion="1.0"/>
+        <component Cclass="WICED_DRIVER_BT" Cgroup="bt_low_energy" Cversion="1.0"/>
+        <component Cclass="WICED_DRIVER_BT" Cgroup="bt_firmware" Cversion="1.0"/>
+      </addComponents>
+    </cdtProject>
+  </applicationImpl>
+</application>

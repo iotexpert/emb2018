@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<configuration xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+  <packages useAllLatestPacks="0">
+    <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1"/>
+  </packages>
+  <device Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="PSoC 62" Dfpu="SP_FPU" Dmpu="MPU" Dname="CY8C6247BZI-D54" Dvendor="Cypress:19" Pname="CortexM4" info="ARM Cortex-M4" url="http://www.keil.com/dd2/cypress/cy8c6247bzi_d54">
+    <package info="Cypress Studio WICED base support" name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+  </device>
+  <toolchain Tcompiler="GCC" Toutput="exe"/>
+  <components>
+    <component Cclass="WICED_BASE" Cgroup="includes" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="doc" name="README.txt" public="0"/>
+      <file category="doc" name="platform/README.txt" public="0"/>
+      <file category="include" name="include/" public="0"/>
+      <file category="header" name="include/default_bt_config_dct.h" public="0"/>
+      <file category="header" name="include/default_network_config_dct.h" public="0"/>
+      <file category="header" name="include/default_p2p_config_dct.h" public="0"/>
+      <file category="header" name="include/default_wifi_config_dct.h" public="0"/>
+      <file category="header" name="include/wiced.h" public="0"/>
+      <file category="header" name="include/wiced_audio.h" public="0"/>
+      <file category="header" name="include/wiced_bluetooth_result.h" public="0"/>
+      <file category="header" name="include/wiced_codec_if.h" public="0"/>
+      <file category="header" name="include/wiced_constants.h" public="0"/>
+      <file category="header" name="include/wiced_crypto.h" public="0"/>
+      <file category="header" name="include/wiced_deep_sleep.h" public="0"/>
+      <file category="header" name="include/wiced_defaults.h" public="0"/>
+      <file category="header" name="include/wiced_dtls.h" public="0"/>
+      <file category="header" name="include/wiced_easy_setup.h" public="0"/>
+      <file category="header" name="include/wiced_filesystem.h" public="0"/>
+      <file category="header" name="include/wiced_framework.h" public="0"/>
+      <file category="header" name="include/wiced_low_power.h" public="0"/>
+      <file category="header" name="include/wiced_management.h" public="0"/>
+      <file category="header" name="include/wiced_platform.h" public="0"/>
+      <file category="header" name="include/wiced_resource.h" public="0"/>
+      <file category="header" name="include/wiced_result.h" public="0"/>
+      <file category="header" name="include/wiced_rtos.h" public="0"/>
+      <file category="header" name="include/wiced_tcpip.h" public="0"/>
+      <file category="header" name="include/wiced_time.h" public="0"/>
+      <file category="header" name="include/wiced_tls.h" public="0"/>
+      <file category="header" name="include/wiced_usb.h" public="0"/>
+      <file category="header" name="include/wiced_utilities.h" public="0"/>
+      <file category="header" name="include/wiced_wifi.h" public="0"/>
+      <file category="header" name="include/wiced_wifi_deep_sleep.h" public="0"/>
+      <file category="header" name="include/wiced_xip.h" public="0"/>
+      <file category="include" name="internal/" public="0"/>
+      <file category="header" name="internal/wiced_filesystem_internal.h" public="0"/>
+      <file category="header" name="internal/wiced_internal_api.h" public="0"/>
+      <file category="include" name="platform/include/" public="0"/>
+      <file category="header" name="platform/include/elf.h" public="0"/>
+      <file category="header" name="platform/include/platform_audio.h" public="0"/>
+      <file category="header" name="platform/include/platform_bluetooth.h" public="0"/>
+      <file category="header" name="platform/include/platform_button.h" public="0"/>
+      <file category="header" name="platform/include/platform_cache_def.h" public="0"/>
+      <file category="header" name="platform/include/platform_constants.h" public="0"/>
+      <file category="header" name="platform/include/platform_dct.h" public="0"/>
+      <file category="header" name="platform/include/platform_dct_old_sdk.h" public="0"/>
+      <file category="header" name="platform/include/platform_ethernet.h" public="0"/>
+      <file category="header" name="platform/include/platform_external_memory.h" public="0"/>
+      <file category="header" name="platform/include/platform_init.h" public="0"/>
+      <file category="header" name="platform/include/platform_memory.h" public="0"/>
+      <file category="header" name="platform/include/platform_mfi.h" public="0"/>
+      <file category="header" name="platform/include/platform_nfc.h" public="0"/>
+      <file category="header" name="platform/include/platform_peripheral.h" public="0"/>
+      <file category="header" name="platform/include/platform_resource.h" public="0"/>
+      <file category="header" name="platform/include/platform_sflash_dct.h" public="0"/>
+      <file category="header" name="platform/include/platform_sleep.h" public="0"/>
+      <file category="header" name="platform/include/platform_usb.h" public="0"/>
+      <file category="header" name="platform/include/wiced_block_device.h" public="0"/>
+      <file category="include" name="MCU/" public="0"/>
+      <file category="header" name="MCU/platform_stdio.h" public="0"/>
+      <file category="header" name="MCU/wiced_apps_common.h" public="0"/>
+      <file category="header" name="MCU/wiced_dct_common.h" public="0"/>
+      <file category="header" name="MCU/wiced_waf_common.h" public="0"/>
+      <file category="header" name="MCU/wwd_platform_common.h" public="0"/>
+      <file category="include" name="platform/MIPS/" public="0"/>
+      <file category="header" name="platform/MIPS/platform_assert.h" public="0"/>
+      <file category="include" name="RTOS/" public="0"/>
+      <file category="header" name="RTOS/wiced_rtos_common.h" public="0"/>
+      <file category="include" name="WWD/include/platform/" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_bus_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_platform_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_resource_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_sdio_interface.h" public="0"/>
+      <file category="header" name="WWD/include/platform/wwd_spi_interface.h" public="0"/>
+      <file category="include" name="WWD/" public="0"/>
+      <file category="include" name="WWD/include/RTOS/" public="0"/>
+      <file category="header" name="WWD/include/RTOS/wwd_rtos_interface.h" public="0"/>
+      <file category="include" name="WWD/include/" public="0"/>
+      <file category="header" name="WWD/include/wwd_assert.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_constants.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_debug.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_eapol.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_events.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_management.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_poll.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_structures.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wifi.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wifi_sleep.h" public="0"/>
+      <file category="header" name="WWD/include/wwd_wlioctl.h" public="0"/>
+      <file category="include" name="WWD/internal/" public="0"/>
+      <file category="header" name="WWD/internal/wwd_ap.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_clm.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_ap_common.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_bcmendian.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_internal.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_logging.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_sdpcm.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_thread.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_thread_internal.h" public="0"/>
+      <file category="header" name="WWD/internal/wwd_wifi_chip_common.h" public="0"/>
+      <file category="include" condition="ARM_CM4" name="platform/ARM_CM4/" public="0"/>
+      <file category="include" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/" public="0"/>
+      <file category="doc" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/CMSIS_EULA.pdf" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cm4.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cm4_simd.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cmFunc.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/CMSIS/core_cmInstr.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_assert.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_checkpoint.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="platform/ARM_CM4/platform_isr.h" public="0"/>
+      <file category="include" condition="ARM_GNU Compiler" name="platform/GCC/" public="0"/>
+      <file category="header" condition="ARM_GNU Compiler" name="platform/GCC/linker_symbols.h" public="0"/>
+      <file category="header" condition="ARM_GNU Compiler" name="platform/GCC/platform_toolchain.h" public="0"/>
+      <file category="include" condition="RTOS_NoOS" name="RTOS/NoOS/WWD/" public="0"/>
+      <file category="header" condition="RTOS_NoOS" name="RTOS/NoOS/WWD/wwd_rtos.h" public="0"/>
+      <file category="include" condition="RTOS_NoOS_CM3_CM4" name="RTOS/NoOS/WWD/Cortex_M3_M4/" public="0"/>
+      <file category="header" condition="RTOS_NoOS_CM3_CM4" name="RTOS/NoOS/WWD/Cortex_M3_M4/noos.h" public="0"/>
+      <file category="header" condition="RTOS_NoOS_CM3_CM4" name="RTOS/NoOS/WWD/Cortex_M3_M4/wwd_rtos_isr.h" public="0"/>
+      <file category="include" condition="NET_NoNS" name="network/NoNS/WWD/" public="0"/>
+      <file category="header" condition="NET_NoNS" name="network/NoNS/WWD/wiced_network.h" public="0"/>
+      <file category="header" condition="NET_NoNS" name="network/NoNS/WWD/wwd_buffer.h" public="0"/>
+      <file category="include" name="WWD/internal/bus_protocols/" public="0"/>
+      <file category="header" name="WWD/internal/bus_protocols/wwd_bus_protocol_interface.h" public="0"/>
+      <file category="include" condition="BUS_SDIO" name="WWD/internal/bus_protocols/SDIO/" public="0"/>
+      <file category="header" condition="BUS_SDIO" name="WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.h" public="0"/>
+      <file category="include" condition="DEVICE_4343x" name="WWD/internal/chips/4343x/" public="0"/>
+      <file category="header" condition="DEVICE_4343x" name="WWD/internal/chips/4343x/chip_constants.h" public="0"/>
+      <file category="include" condition="ANY_NETWORK" name="WWD/include/network/" public="0"/>
+      <file category="header" condition="ANY_NETWORK" name="WWD/include/network/wwd_buffer_interface.h" public="0"/>
+      <file category="header" condition="ANY_NETWORK" name="WWD/include/network/wwd_network_constants.h" public="0"/>
+      <file category="header" condition="ANY_NETWORK" name="WWD/include/network/wwd_network_interface.h" public="0"/>
+    </component>
+    <component Cclass="WICED_BASE" Cgroup="minimum_source" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="other" name="make" public="0"/>
+      <file category="other" name="make.exe" public="0"/>
+      <file category="other" name="Makefile" public="0"/>
+      <file category="sourceC" name="internal/wiced_core.c" public="0"/>
+      <file category="sourceC" name="MCU/platform_stdio.c" public="0"/>
+      <file category="sourceC" name="MCU/wiced_apps_common.c" public="0"/>
+      <file category="sourceC" condition="ANY_NETWORK" name="MCU/wiced_platform_common.c" public="0"/>
+      <file category="sourceC" name="MCU/wiced_waf_common.c" public="0"/>
+      <file category="sourceC" condition="INTERNAL_FLASH" name="MCU/wiced_dct_internal_common.c" public="0"/>
+      <file category="sourceC" name="MCU/wiced_dct_update.c" public="0"/>
+      <file category="sourceC" condition="ARM_CM4" name="platform/ARM_CM4/hardfault_handler.c" public="0"/>
+      <file category="sourceC" condition="ARM_CM4" name="platform/ARM_CM4/host_cm4.c" public="0"/>
+      <file category="sourceC" condition="ARM_CM4_GCC" name="platform/ARM_CM4/crt0_GCC.c" public="0"/>
+      <file category="sourceC" condition="ARM_GNU Compiler" name="platform/GCC/cxx_funcs.c" public="0"/>
+      <file category="sourceC" condition="ARM_GNU Compiler" name="platform/GCC/math_newlib.c" public="0"/>
+      <file category="sourceC" condition="ARM_GNU Compiler" name="platform/GCC/mem_newlib.c" public="0"/>
+      <file category="sourceC" condition="ARM_GNU Compiler" name="platform/GCC/stdio_newlib.c" public="0"/>
+      <file category="sourceC" condition="ARM_GNU Compiler" name="platform/GCC/time_newlib.c" public="0"/>
+      <file category="sourceC" condition="RTOS_NoOS" name="RTOS/NoOS/WWD/wwd_rtos.c" public="0"/>
+      <file category="sourceC" condition="RTOS_NoOS_CM3_CM4" name="RTOS/NoOS/WWD/Cortex_M3_M4/noos.c" public="0"/>
+      <file category="sourceC" condition="NET_NoNS" name="network/NoNS/WWD/wwd_buffer.c" public="0"/>
+      <file category="sourceC" condition="BUS_SDIO" name="WWD/internal/bus_protocols/SDIO/wwd_bus_protocol.c" public="0"/>
+      <file category="sourceC" condition="DEVICE_4343x" name="WWD/internal/chips/4343x/wwd_ap.c" public="0"/>
+      <file category="sourceC" condition="DEVICE_4343x" name="WWD/internal/chips/4343x/wwd_chip_specific_functions.c" public="0"/>
+    </component>
+    <component Cclass="WICED_BASE" Cgroup="WWD_source" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="WWD/internal/wwd_ap_common.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_clm.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_debug.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_eapol.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_internal.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_logging.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_management.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_rtos_interface.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_sdpcm.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_thread.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_thread_internal.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/wwd_wifi_sleep.c" public="0"/>
+      <file category="sourceC" name="WWD/internal/bus_protocols/wwd_bus_common.c" public="0"/>
+    </component>
+    <component Cclass="WICED_DRIVER_BASE" Cgroup="spi_flash" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="include" condition="PSOC6_SFLASH" name="platforms/CY8CKIT_062/" public="0"/>
+      <file category="header" condition="PSOC6_SFLASH" name="platforms/CY8CKIT_062/cy_smif_memconfig.h" public="0"/>
+      <file category="header" condition="PSOC6_SFLASH" name="MCU/PSoC6/peripherals/spi_flash/spi_flash.h" public="0"/>
+      <file category="sourceC" condition="PSOC6_SFLASH" name="MCU/PSoC6/peripherals/spi_flash/spi_flash.c" public="0"/>
+      <file category="sourceC" condition="PSOC6_SFLASH" name="platforms/CY8CKIT_062/cy_smif_memconfig.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="crc" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="libs/crc/crc.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="gpio_button" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="libs/gpio_button/gpio_button.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="linked_list" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="libs/linked_list/linked_list.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="ring_buffer" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="libs/ring_buffer/ring_buffer.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="TLV" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="libs/TLV/tlv.c" public="0"/>
+    </component>
+    <component Cclass="WICED_LIB_BASE" Cgroup="util_includes" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="include" name="libs/base64/" public="0"/>
+      <file category="header" name="libs/base64/base64.h" public="0"/>
+      <file category="include" name="libs/bufmgr/" public="0"/>
+      <file category="header" name="libs/bufmgr/bufmgr.h" public="0"/>
+      <file category="include" name="libs/button_manager/" public="0"/>
+      <file category="header" name="libs/button_manager/button_manager.h" public="0"/>
+      <file category="include" name="libs/cJSON/" public="0"/>
+      <file category="header" name="libs/cJSON/cJSON.h" public="0"/>
+      <file category="include" name="libs/COAP/client/" public="0"/>
+      <file category="header" name="libs/COAP/client/coap_client.h" public="0"/>
+      <file category="include" name="libs/crc/" public="0"/>
+      <file category="header" name="libs/crc/crc.h" public="0"/>
+      <file category="include" name="libs/DNS/" public="0"/>
+      <file category="header" name="libs/DNS/dns.h" public="0"/>
+      <file category="include" name="libs/gpio_button/" public="0"/>
+      <file category="header" name="libs/gpio_button/gpio_button.h" public="0"/>
+      <file category="include" name="libs/HTTP/" public="0"/>
+      <file category="header" name="libs/HTTP/http.h" public="0"/>
+      <file category="include" name="libs/HTTP/" public="0"/>
+      <file category="header" name="libs/HTTP/http_stream.h" public="0"/>
+      <file category="include" name="libs/HTTP2/" public="0"/>
+      <file category="header" name="libs/HTTP2/http2.h" public="0"/>
+      <file category="include" name="libs/HTTP_client/" public="0"/>
+      <file category="header" name="libs/HTTP_client/http_client.h" public="0"/>
+      <file category="include" name="libs/JSON_parser/" public="0"/>
+      <file category="header" name="libs/JSON_parser/JSON.h" public="0"/>
+      <file category="include" name="libs/linked_list/" public="0"/>
+      <file category="header" name="libs/linked_list/linked_list.h" public="0"/>
+      <file category="include" name="libs/mini_printf/" public="0"/>
+      <file category="header" name="libs/mini_printf/mini_printf.h" public="0"/>
+      <file category="include" name="libs/ota2/" public="0"/>
+      <file category="header" name="libs/ota2/wiced_ota2_image.h" public="0"/>
+      <file category="include" name="libs/ring_buffer/" public="0"/>
+      <file category="header" name="libs/ring_buffer/ring_buffer.h" public="0"/>
+      <file category="include" name="libs/SMTP/" public="0"/>
+      <file category="header" name="libs/SMTP/smtp.h" public="0"/>
+      <file category="include" name="libs/SNTP/" public="0"/>
+      <file category="header" name="libs/SNTP/sntp.h" public="0"/>
+      <file category="include" name="libs/TLV/" public="0"/>
+      <file category="header" name="libs/TLV/tlv.h" public="0"/>
+      <file category="include" name="libs/wiced_log/" public="0"/>
+      <file category="header" name="libs/wiced_log/wiced_log.h" public="0"/>
+      <file category="include" name="libs/wicedfs/src/" public="0"/>
+      <file category="header" name="libs/wicedfs/src/wicedfs.h" public="0"/>
+    </component>
+    <component Cclass="WICED_MCU" Cgroup="PSoC6" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Centroid_LL.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Control.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Filter.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_INT.c" public="0"/>
+      <file category="library" condition="ARM_GNU Compiler" name="MCU/PSoC6/peripherals/CapSense/CapSense_Library_GCC_M4.a" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Processing.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Sensing.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_SensingCSD_LL.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Structure.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/CapSense_Tuner.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/CapSense/platform_capsense.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/common/psoc62_cm0plus_image.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/common/system_psoc62_cm4.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_amux.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_cfg.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_sysint_cfg.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cymetadata.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma/cy_dma.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash/cy_flash.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio/cy_gpio.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s/cy_i2s.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_drv.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_pipe.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_config.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_sema.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp/cy_lpcomp.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/cy_mcwdt.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm/cy_pdm_pcm.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile/cy_profile.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot/cy_prot.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc/cy_rtc.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_common.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_ezi2c.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_i2c.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_spi.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_uart.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_CMD_DMA.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Read_DMA.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Resp_DMA.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Write_DMA.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif/cy_smif.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif/cy_smif_memslot.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk/cy_sysclk.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint/cy_sysint.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib/cy_syslib.c" public="0"/>
+      <file category="sourceAsm" condition="ARM_GNU Compiler" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib/gcc/cy_syslib_gcc.S" public="0"/>
+      <file category="sourceAsm" condition="ANY_COMPILER" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib/mdk/cy_syslib_mdk.s" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm/cy_syspm.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick/cy_systick.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_counter.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_pwm.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_quaddec.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux/cy_trigmux.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt/cy_wdt.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_clock.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_gpio.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_i2c.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_i2s.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_mcu_powersave.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_pdm_pcm.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_pwm.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_spi.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_uart.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/peripherals/platform_watchdog.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/platform_filesystem.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/platform_init.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/platform_unhandled_isr.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/platform_vector_table.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/WAF/waf_platform.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/WWD/wwd_platform.c" public="0"/>
+      <file category="sourceC" name="MCU/PSoC6/WWD/wwd_SDIO.c" public="0"/>
+    </component>
+    <component Cclass="WICED_MCU" Cgroup="PSoC6_includes" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/cmsis/include/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux/" public="0"/>
+      <file category="include" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt/" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/app_no_bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/app_ram.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/app_with_bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/cy8c6x7/dct.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/cy8c6x7/memory_no_bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/cy8c6x7/memory_ram.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/cy8c6x7/memory_with_bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/ota2_app_with_bootloader.ld" public="0"/>
+      <file category="other" name="MCU/PSoC6/GCC/ota2_bootloader.ld" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Centroid_LL.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Configuration.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Control.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Filter.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_ModClk.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Processing.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_RegisterMap.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Sensing.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_SensingCSD_LL.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_SmartSense_LL.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Structure.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/CapSense_Tuner.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/CapSense/platform_capsense.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/arm_common_tables.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/arm_const_structs.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/arm_math.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/cmsis_armcc.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/cmsis_armclang.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/cmsis_compiler.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/cmsis_gcc.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/core_armv8mbl.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/core_armv8mml.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/cmsis/include/core_cm0.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="MCU/PSoC6/peripherals/libraries/cmsis/include/core_cm4.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_backup.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_ble.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_cpuss.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_crypto.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_csd.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_ctbm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_ctdac.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_dw.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_efuse.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_efuse_data.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_fault.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_flashc.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_gpio.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_headers.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_hsiom.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_i2s.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_ipc.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_lcd.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_lpcomp.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_pass.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_pdm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_peri.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_profile.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_prot.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_sar.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_scb.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_sflash.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_smartio.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_smif.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_srss.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_tcpwm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_udb.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/ip/cyip_usbfs.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/cy8c6247bzi_d54.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/cy_device_headers.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/gpio_psoc62_124_bga.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/psoc62_config.h" public="0"/>
+      <file category="header" condition="ARM_CM4" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/system_psoc62_cm4.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/devices/psoc6/psoc62/include/system_psoc62.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyapicallbacks.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cydevice_trm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cydisabledsheets.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_cfg.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_gpio.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_sysint.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/cyfitter_sysint_cfg.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/creator/project.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto/cy_crypto.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto/cy_crypto_common.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto/cy_crypto_config.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/crypto/cy_crypto_server.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctb/cy_ctb.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ctdac/cy_ctdac.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/dma/cy_dma.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/efuse/cy_efuse.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/flash/cy_flash.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/gpio/cy_gpio.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/i2s/cy_i2s.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_config.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_drv.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_lock.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_pipe.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/ipc/cy_ipc_sema.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp/cy_lpcomp.h" public="0"/>
+      <file category="other" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lpcomp/docs/lpcomp_inputs.png" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/lvd/cy_lvd.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/cy_mcwdt.h" public="0"/>
+      <file category="other" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/docs/MCWDT.png" public="0"/>
+      <file category="other" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/docs/MCWDT01_clocks.png" public="0"/>
+      <file category="other" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/mcwdt/docs/MCWDT2_clocks.png" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/pdm_pcm/cy_pdm_pcm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/profile/cy_profile.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/prot/cy_prot.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/rtc/cy_rtc.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sar/cy_sar.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_common.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_ezi2c.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_i2c.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_spi.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/scb/cy_scb_uart.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_CMD_DMA.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Internal_Clock.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Read_DMA.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Resp_DMA.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sdio/SDIO_HOST_Write_DMA.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif/cy_smif.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/smif/cy_smif_memslot.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysanalog/cy_sysanalog.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysclk/cy_sysclk.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/sysint/cy_sysint.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syslib/cy_syslib.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/syspm/cy_syspm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/systick/cy_systick.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_counter.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_pwm.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/tcpwm/cy_tcpwm_quaddec.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux/cy_trigmux.h" public="0"/>
+      <file category="other" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/trigmux/docs/trigmux_parameter.png" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/libraries/drivers/peripheral/wdt/cy_wdt.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/platform_i2s.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/peripherals/platform_mcu_peripheral.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/platform_cmsis.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/platform_isr_interface.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/platform_low_power.h" public="0"/>
+      <file category="header" name="MCU/PSoC6/WAF/waf_platform.h" public="0"/>
+    </component>
+    <component Cclass="WICED_NETWORK" Cgroup="NoNS" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="doc" name="network/NoNS/NoNS.mk" public="0"/>
+    </component>
+    <component Cclass="WICED_PLATFORM" Cgroup="CY8CKIT_062" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="doc" name="platforms/CY8CKIT_062/README.txt" public="0"/>
+      <file category="sourceC" name="platforms/CY8CKIT_062/platform.c" public="0"/>
+      <file category="sourceC" name="firmware/4343W/4343W.cyrsc" public="0"/>
+      <file attr="config" category="utility" name="platforms/CY8CKIT_062/sflash_write.elf" public="0" version="1.0"/>
+    </component>
+    <component Cclass="WICED_PLATFORM" Cgroup="CY8CKIT_062_includes" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="include" name="platforms/CY8CKIT_062/" public="0"/>
+      <file category="doc" name="platforms/CY8CKIT_062/schematics/CY8CKIT-062_Rev01.pdf" public="0"/>
+      <file category="header" name="platforms/CY8CKIT_062/wifi_nvram_image.h" public="0"/>
+      <file category="header" name="platforms/CY8CKIT_062/platform.h" public="0"/>
+      <file category="header" name="platforms/CY8CKIT_062/platform_config.h" public="0"/>
+    </component>
+    <component Cclass="WICED_RTOS" Cgroup="NoOS" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="header" name="RTOS/NoOS/rtos.h" public="0"/>
+    </component>
+    <component Cclass="WICED_WAF_APPS" Cgroup="bootloader" Cvendor="Cypress" Cversion="1.0" versionMatchMode="fixed">
+      <package name="WICED_base" url="http://www.cypress.com" vendor="Cypress" version="0.0.1" versionMatchMode="fixed"/>
+      <file category="sourceC" name="waf_apps/bootloader/bootloader.c" public="0"/>
+    </component>
+  </components>
+  <apis/>
+</configuration>

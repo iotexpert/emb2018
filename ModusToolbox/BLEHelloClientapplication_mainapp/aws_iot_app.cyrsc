@@ -1,0 +1,12 @@
+
+//
+// Note: syntax is very important.  The line should start with
+// the slash comments, a single space, and the word Resource followed
+// by a colon to ID a resource.  Anything after the colon is the resource
+// path. 
+//
+// Note: Do not use '-' character in path or file names. Use '_' instead.
+
+// Resource:myaws_iot_app/resources/client.cer:resources/client.cer
+// Resource:myaws_iot_app/resources/privkey.cer:resources/privkey.cer
+// Resource:myaws_iot_app/resources/rootca.cer:resources/rootca.cer

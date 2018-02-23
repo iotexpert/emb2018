@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.cdt.launch.launchGroup">
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.0.action" value="WAIT_FOR_TERMINATION"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.0.enabled" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.0.mode" value="run"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.0.name" value="BLEPublisher Program"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.1.action" value="NONE"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.1.enabled" value="true"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.1.mode" value="debug"/>
+<stringAttribute key="org.eclipse.cdt.launch.launchGroup.1.name" value="BLEPublisher Debug"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/BLEPublisher"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+</launchConfiguration>
