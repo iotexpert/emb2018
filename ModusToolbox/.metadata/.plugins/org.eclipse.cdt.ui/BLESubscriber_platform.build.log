@@ -1,6 +1,6 @@
-14:49:03 **** Incremental Build of configuration Debug for project BLESubscriber_platform ****
+17:35:49 **** Incremental Build of configuration Debug for project BLESubscriber_platform ****
 "/Applications/ModusToolbox 1.0/tools/modus-shell-1.0/bin/make" -j3 all 
 make: Nothing to be done for `all'.
 
-14:49:03 Build Finished (took 378ms)
+17:35:49 Build Finished (took 404ms)
 

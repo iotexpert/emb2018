@@ -25,6 +25,9 @@
 **/*_resources/filesystem.bin
 **/*_resources/staging/
 
+.metadata/.bak_0.*
+.metadata/.plugins/org.eclipse.core.resources/.history/*
+
 
 # Vi/Emacs text editor detritus 
 .*.sw*

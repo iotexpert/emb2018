@@ -1,4 +1,4 @@
-14:47:50 **** Incremental Build of configuration Debug for project BLEPublisher_dct ****
+17:35:30 **** Incremental Build of configuration Debug for project BLEPublisher_dct ****
 "/Applications/ModusToolbox 1.0/tools/modus-shell-1.0/bin/make" -j3 all 
 make --no-print-directory pre-build
 "/Applications/ModusToolbox 1.0/tools/modus-shell-1.0/bin/perl" "/Applications/ModusToolbox 1.0/tools/wiced-tools-1.0/scripting/mac_generator/mac_generator.pl"
@@ -6,5 +6,5 @@ make --no-print-directory pre-build
 make --no-print-directory main-build
 make[1]: Nothing to be done for `main-build'.
 
-14:47:50 Build Finished (took 186ms)
+17:35:30 Build Finished (took 265ms)
 
