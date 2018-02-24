@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete 6 resources" deleteContents="true" description="Delete 6 resources" element1="/BLEHelloClientapplication" element2="/BLEHelloClientapplication_bootloader" element3="/BLEHelloClientapplication_dct" element4="/BLEHelloClientapplication_mainapp" element5="/BLEHelloClientapplication_platform" element6="/BLEHelloClientapplication_resources" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="6" stamp="1519394740093"/>
-</session>

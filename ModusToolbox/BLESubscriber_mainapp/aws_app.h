@@ -1,6 +1,7 @@
 #ifndef AWS_APP_H
 #define AWS_APP_H
 
-void aws_start();
+#include "wiced.h"
+wiced_result_t aws_start();
 
 #endif

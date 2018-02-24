@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;BLESubscriber_mainapp/ble_hello_client.c&apos; to &apos;ble_subscriber.c&apos;" description="Rename resource &apos;ble_hello_client.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="ble_hello_client.c" name="ble_subscriber.c" stamp="1519419644855" updateReferences="true"/>
-</session>

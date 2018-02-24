@@ -22,9 +22,9 @@
  *    After a legal message is received it will call
  *    the BLE Central function to write the value
  *    to the P6 Robot.  Specifically
- *        hello_client_write_motor_m1(val)
+ *        hello_client_write_motor(1,val)
  *        or
- *        hello_client_write_motor_m2(val)
+ *        hello_client_write_motor(2,val)
  *
  **************************************************/
 
@@ -37,8 +37,7 @@
 /******************************************************
  *               Function Declarations
  ******************************************************/
-void aws_start( void ); // This public interface to start the whole thing going
-static wiced_result_t aws_init();
+wiced_result_t aws_start( void ); // This public interface to start the whole thing going
 static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type, void *data1 );
 
 
@@ -55,10 +54,16 @@ static wiced_aws_connect_t connection_parameters;
 //#define FUNCTION_PRINT(args) WPRINT_MACRO(args)
 #define FUNCTION_PRINT(args)
 
-
-void aws_start( void )
+/*
+ * aws_start
+ *
+ * This function turns on the wifi connection then starts the aws connection
+ *
+ */
+wiced_result_t aws_start( void )
 {
 	wiced_result_t ret = WICED_SUCCESS;
+	uint32_t size_out;
 
 	WPRINT_APP_INFO(("Starting AWS\n"));
 	/* Disable roaming to other access points */
@@ -69,13 +74,6 @@ void aws_start( void )
 		ret = wiced_network_up( WICED_STA_INTERFACE, WICED_USE_EXTERNAL_DHCP_SERVER, NULL );
 	} while (ret != WICED_SUCCESS);
 
-	aws_init();
-}
-
-static wiced_result_t aws_init()
-{
-	wiced_result_t ret;
-	uint32_t size_out;
 
 	ret = wiced_hostname_lookup( WICED_AWS_IOT_HOST_NAME, &app_info.broker_address, 10000, WICED_STA_INTERFACE );
 	WPRINT_APP_INFO( ("Resolved Broker IP: %u.%u.%u.%u\n\n", (uint8_t)(GET_IPV4_ADDRESS(app_info.broker_address) >> 24), (uint8_t)(GET_IPV4_ADDRESS(app_info.broker_address) >> 16), (uint8_t)(GET_IPV4_ADDRESS(app_info.broker_address) >> 8), (uint8_t)(GET_IPV4_ADDRESS(app_info.broker_address) >> 0)) );
@@ -139,9 +137,13 @@ static wiced_result_t aws_init()
 }
 
 
-/******************************************************
- *               Static Function Definitions
- ******************************************************/
+/*
+ * aws_data_callback
+ *
+ * This function handles the events from the AWS MQTT Broker.  Since we are subscribing the only one we
+ * care about is "WICED_AWS_EVENT_TYPE_DATA_RECEIVED:"
+ *
+ */
 static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type ,void *data )
 {
 	wiced_aws_data_info_t *msg = (wiced_aws_data_info_t *) data;
@@ -160,19 +162,7 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 		if(msg->data_len >= 6 && msg->data[0] == 'M' && (msg->data[1]  == '1' || msg->data[1] == '2')) // || msg->data[1] == '2'))
 		{
 			sscanf((const char*)&msg->data[5],"%2X",(unsigned int*)&val); // Pure unadulterated evil....
-			switch(msg->data[1])
-			{
-			case '1':
-			    ble_subscriber_write_motor_m1(val);
-			    break;
-
-			case'2':
-			    ble_subscriber_write_motor_m2(val);
-				break;
-
-			default:
-				break;
-			}
+			ble_subscriber_write_motor(msg->data[1]-'0',val);             // Even more evil
 		}
 	}
 	break;
