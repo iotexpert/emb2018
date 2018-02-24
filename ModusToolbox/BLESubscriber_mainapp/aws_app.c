@@ -1,43 +1,46 @@
-/*
- * $ Copyright Cypress Semiconductor $
- */
-
-/** @file
+/* ***********************************************
+ * aws_iot.c
  *
- */
+ * Contains all of the functions for the AWS IoT
+ * MQTT Subscriber
+ *
+ * When you call aws_start() it will
+ *     Make a wifi connection with wiced_network_up
+ *     Open an MQTT connection to AWS IoT
+ *     Subscribe to the MOTOR_POSITION
+ *
+ * Each time a message is posted to that topic it
+ * will parse the message.  It expects the message
+ * to be in this format
+ *
+ *    MZ=0xYY
+ *    Z = (1 | 2)
+ *    YY = a hex value between 0x00 and 0x64
+ *
+ *    e.g. M1=0x32 means the motor 1 goes to 50%
+ *
+ *    After a legal message is received it will call
+ *    the BLE Central function to write the value
+ *    to the P6 Robot.  Specifically
+ *        hello_client_write_motor_m1(val)
+ *        or
+ *        hello_client_write_motor_m2(val)
+ *
+ **************************************************/
 
 #include "wiced.h"
 #include "aws_config.h"
 #include "aws_common.h"
 #include "ble_subscriber.h"
 
-/******************************************************
- *                      Macros
- ******************************************************/
-
-
-/******************************************************
- *                    Constants
- ******************************************************/
-
-/******************************************************
- *                   Enumerations
- ******************************************************/
-
-/******************************************************
- *                 Type Definitions
- ******************************************************/
-
-/******************************************************
- *                    Structures
- ******************************************************/
 
 /******************************************************
  *               Function Declarations
  ******************************************************/
-
-static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type, void *data1 );
+void aws_start( void ); // This public interface to start the whole thing going
 static wiced_result_t aws_init();
+static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t event_type, void *data1 );
+
 
 /******************************************************
  *               Variable Definitions
@@ -160,11 +163,11 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 			switch(msg->data[1])
 			{
 			case '1':
-			    hello_client_write_motor_m1(val);
+			    ble_subscriber_write_motor_m1(val);
 			    break;
 
 			case'2':
-			    hello_client_write_motor_m2(val);
+			    ble_subscriber_write_motor_m2(val);
 				break;
 
 			default:

@@ -1,31 +1,19 @@
 /*
- * $ Copyright Cypress Semiconductor $
+ * ble_subscriber.c
+ *
+ * This the main file that contains the BLE Subscriber part of the EMB2018 Project.
+ *
+ * The project
+ * 		1. Starts in application_start
+ *     		- Calls aws_start - which turns on Wifi and connects to AWS and subcribes
+ *     		- Starts the BLE Stack
+ *
+ *		2. The
+ *
+ *
+ *
+ *
  */
-
-/** @file
-*
-* BLE Vendor Specific Client Device
-*
-* The Hello Client application is designed to connect and access services
-* of the Hello Sensor device.  Hello Client can connect up to three
-* Hello Sensor Device's.  Because handles of the all attributes of
-* the Hello Sensor are well known, Hello Client does not perform GATT
-* discovery, but uses them directly.  In addition to that Hello Client
-* allows another master to connect, so the device will behave as a slave
-* in one Bluetooth piconet and a master in another.  To accomplish that
-* application can do both advertisements and scan.  Hello Client assumes
-* that Hello Sensor advertises a special UUID and connects to the device
-* which publishes it.
-*
-* Features demonstrated
-*  - Registration with LE stack for various events
-*  - Connection to a master and a slave
-*  - As a master processing notifications from the server and
-*    sending notifications to the client
-*  - As a slave processing writes from the client and sending writes
-*    to the server
-*
-*/
 #include <string.h>
 #include "wiced_bt_dev.h"
 #include "wiced_bt_gatt.h"
@@ -72,25 +60,23 @@ typedef struct
     uint8_t  addr_type;                 // peer address type
     uint8_t  transport;                 // peer connected transport
     uint8_t  peer_addr[BD_ADDR_LEN];    // Peer BD Address
-} hello_client_peer_info_t;
+} ble_subscriber_peer_info_t;
 
 
 /* Hello client application info */
 typedef struct
 {
-    uint32_t                 app_timer_count;                         // App Timer Count
+   // uint32_t                 app_timer_count;                         // App Timer Count
     uint16_t                 conn_id;                                 // Hold the slave connection id
     uint16_t                 master_conn_id;                          // Handle of the master connection
-    hello_client_peer_info_t peer_info; // Peer Info
-} hello_client_app_t;
+    ble_subscriber_peer_info_t peer_info; // Peer Info
+} ble_subscriber_app_t;
 
 /******************************************************************************
  *                            Variables Definitions
  ******************************************************************************/
 
-/* Holds the hello client app info */
-hello_client_app_t g_hello_client;
-
+ble_subscriber_app_t g_ble_subscriber;
 const uint8_t hello_service[16] = {UUID_MOTOR_SERVICE};
 
 extern const wiced_bt_cfg_settings_t wiced_bt_cfg_settings;
@@ -99,15 +85,17 @@ extern const wiced_bt_cfg_buf_pool_t wiced_bt_cfg_buf_pools[];
 /******************************************************************************
  *                          Function Definitions
  ******************************************************************************/
-static void                     hello_client_app_init( void );
-static wiced_result_t           hello_client_management_cback( wiced_bt_management_evt_t event,  wiced_bt_management_evt_data_t *p_event_data );
+static void                     ble_subscriber_app_init( void );
+static wiced_result_t           ble_subscriber_management_cback( wiced_bt_management_evt_t event,  wiced_bt_management_evt_data_t *p_event_data );
 
-static wiced_bt_gatt_status_t   hello_client_gatt_callback( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data );
-static wiced_bt_gatt_status_t   hello_client_gatt_connection_up( wiced_bt_gatt_connection_status_t *p_conn_status );
-static wiced_bt_gatt_status_t   hello_client_gatt_connection_down( wiced_bt_gatt_connection_status_t *p_conn_status );
-static wiced_bt_gatt_status_t   hello_client_gatt_op_comp_cb( wiced_bt_gatt_operation_complete_t *p_data );
+static wiced_bt_gatt_status_t   ble_subscriber_gatt_callback( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data );
+static wiced_bt_gatt_status_t   ble_subscriber_gatt_connection_up( wiced_bt_gatt_connection_status_t *p_conn_status );
+static wiced_bt_gatt_status_t   ble_subscriber_gatt_connection_down( wiced_bt_gatt_connection_status_t *p_conn_status );
+#if 0
+static wiced_bt_gatt_status_t   ble_subscriber_gatt_op_comp_cb( wiced_bt_gatt_operation_complete_t *p_data );
+#endif
 
-static void                     hello_client_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result, uint8_t *p_adv_data );
+static void                     ble_subscriber_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result, uint8_t *p_adv_data );
 
 /*
  *  Entry point to the application. Set device configuration and start BT
@@ -116,56 +104,65 @@ static void                     hello_client_scan_result_cback( wiced_bt_ble_sca
  */
 void application_start( )
 {
-    //wiced_core_init();
 	wiced_init();
     aws_start();
 
-    // WICED BT Stack initialization and registering the managment callback
-    wiced_bt_stack_init( hello_client_management_cback, &wiced_bt_cfg_settings, wiced_bt_cfg_buf_pools );
+    wiced_bt_stack_init( ble_subscriber_management_cback, &wiced_bt_cfg_settings, wiced_bt_cfg_buf_pools );
 
     wiced_gpio_output_low(WICED_LED1);
     wiced_gpio_output_high(WICED_LED2);
 }
+
 /*
  * hello client    return 0; // exit thread
  bt/ble device and link management callbacks
  */
-wiced_result_t hello_client_management_cback( wiced_bt_management_evt_t event,  wiced_bt_management_evt_data_t *p_event_data)
+
+wiced_result_t ble_subscriber_management_cback( wiced_bt_management_evt_t event,  wiced_bt_management_evt_data_t *p_event_data)
 {
 	wiced_result_t               result = WICED_BT_SUCCESS;
 
-	FUNCTION_PRINT(("hello_client_management_cback: %x\n", event ));
+	FUNCTION_PRINT(("ble_subscriber_management_cback: %x\n", event ));
 
 	switch( event )
 	{
 	/* Bluetooth  stack enabled */
 	case BTM_ENABLED_EVT:
-		hello_client_app_init( );
+		ble_subscriber_app_init( );
 		//start looking for hello sensor
 		if( wiced_bt_ble_get_current_scan_state() == BTM_BLE_SCAN_TYPE_NONE )
 		{
-			result = wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, hello_client_scan_result_cback );
-			FUNCTION_PRINT(( "hello_client_start_scan: %d\n", result ));
+			result = wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, ble_subscriber_scan_result_cback );
+			FUNCTION_PRINT(( "ble_subscriber_start_scan: %d\n", result ));
 		}
 		break;
 
 	case BTM_BLE_SCAN_STATE_CHANGED_EVT:
-		WPRINT_BT_APP_INFO(( "Scan State Change: %d\n", p_event_data->ble_scan_state_changed ));
+		FUNCTION_PRINT(( "BTM_BLE_SCAN_STATE_CHANGED_EVT: %d\n", p_event_data->ble_scan_state_changed ));
 		break;
+
+	case BTM_LOCAL_IDENTITY_KEYS_REQUEST_EVT:
+		FUNCTION_PRINT(("BTM_LOCAL_IDENTITY_KEYS_REQUEST_EVT\n"));
+		break;
+#if 0
+
 	case BTM_DISABLED_EVT:
 		break;
 
 	case BTM_USER_CONFIRMATION_REQUEST_EVT:
-		FUNCTION_PRINT(("Numeric_value: %d \n", p_event_data->user_confirmation_request.numeric_value));
+		WPRINT_APP_INFO(("Numeric_value: %d \n", (int)p_event_data->user_confirmation_request.numeric_value));
 		wiced_bt_dev_confirm_req_reply( WICED_BT_SUCCESS , p_event_data->user_confirmation_request.bd_addr);
 		break;
 
+
 	case BTM_PASSKEY_NOTIFICATION_EVT:
-		FUNCTION_PRINT(("PassKey Notification. Key %d \n", p_event_data->user_passkey_notification.passkey ));
+		WPRINT_APP_INFO(("PassKey Notification. Key %d \n",(int) p_event_data->user_passkey_notification.passkey ));
 		wiced_bt_dev_confirm_req_reply(WICED_BT_SUCCESS, p_event_data->user_passkey_notification.bd_addr );
 		break;
 
+
 	case BTM_PAIRING_IO_CAPABILITIES_BLE_REQUEST_EVT:
+		WPRINT_APP_INFO(("BTM_PAIRING_IO_CAPABILITIES_BLE_REQUEST_EVT\n"));
 		p_event_data->pairing_io_capabilities_ble_request.local_io_cap      = BTM_IO_CAPABILITIES_NONE;
 		p_event_data->pairing_io_capabilities_ble_request.oob_data          = BTM_OOB_NONE;
 		p_event_data->pairing_io_capabilities_ble_request.auth_req          = BTM_LE_AUTH_REQ_NO_BOND;
@@ -173,39 +170,51 @@ wiced_result_t hello_client_management_cback( wiced_bt_management_evt_t event,  
 		p_event_data->pairing_io_capabilities_ble_request.init_keys         = BTM_LE_KEY_PENC | BTM_LE_KEY_PID ;
 		p_event_data->pairing_io_capabilities_ble_request.resp_keys         = BTM_LE_KEY_PENC | BTM_LE_KEY_PID ;
 		break;
+#endif
 
+#if 0
 	case BTM_PAIRING_COMPLETE_EVT:
 	{
 		wiced_bt_dev_ble_pairing_info_t * p_info = &p_event_data->pairing_complete.pairing_complete_info.ble;
 
 		WPRINT_APP_INFO(( "Pairing Complete: %d\n", p_info->reason ));
 
-		//hello_client_smp_bond_result( p_event_data->pairing_complete.bd_addr, p_info->reason );
+		//ble_subscriber_smp_bond_result( p_event_data->pairing_complete.bd_addr, p_info->reason );
 	}
 	break;
+#endif
 
+#if 0
 	case BTM_ENCRYPTION_STATUS_EVT:
 	{
 		wiced_bt_dev_encryption_status_t * p_status = 	&p_event_data->encryption_status;
 
 		WPRINT_APP_INFO(( "encryption status: res %d\n", p_status->result));
-		//	hello_client_encryption_changed( p_status->result ,p_status->bd_addr );
+		//	ble_subscriber_encryption_changed( p_status->result ,p_status->bd_addr );
 
 	}
+
 	break;
 
 	case BTM_SECURITY_REQUEST_EVT:
 		/* Use the default security */
+		WPRINT_APP_INFO(("Security Event\n"));
 		wiced_bt_ble_security_grant( p_event_data->security_request.bd_addr, WICED_BT_SUCCESS );
 		break;
 
+#endif
 
 	case BTM_PAIRED_DEVICE_LINK_KEYS_REQUEST_EVT:
+		FUNCTION_PRINT(("BTM_PAIRED_DEVICE_LINK_KEYS_REQUEST_EVT\n"));
 		return WICED_ERROR;
 		break;
 
+
+	case BTM_LPM_STATE_LOW_POWER:
+		break;
+
 	default:
-		FUNCTION_PRINT(("Unknown BTM event %d\n",event));
+		WPRINT_APP_INFO(("Unknown BTM event %d\n",event));
 		break;
 	}
 
@@ -216,25 +225,21 @@ wiced_result_t hello_client_management_cback( wiced_bt_management_evt_t event,  
  * WICED BT Init Complete.  This function is called when device initialization
  * has been completed.  Perform the App Initializations & Callback Registrations
  */
-void hello_client_app_init( void )
+void ble_subscriber_app_init( void )
 {
-    wiced_bt_gatt_status_t gatt_status;
-
-    WPRINT_BT_APP_INFO(( "hello_client_app_init\n" ));
-    memset( &g_hello_client, 0, sizeof( g_hello_client ) );
-    gatt_status = wiced_bt_gatt_register( hello_client_gatt_callback );
-    WPRINT_BT_APP_INFO(( "wiced_bt_gatt_register status %d \n", gatt_status ));
-
+    FUNCTION_PRINT(( "ble_subscriber_app_init\n" ));
+    memset( &g_ble_subscriber, 0, sizeof( g_ble_subscriber ) );
+    wiced_bt_gatt_register( ble_subscriber_gatt_callback );
 }
 
 /*
  * Callback function is executed to process various GATT events
  */
-wiced_bt_gatt_status_t hello_client_gatt_callback( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data)
+wiced_bt_gatt_status_t ble_subscriber_gatt_callback( wiced_bt_gatt_evt_t event, wiced_bt_gatt_event_data_t *p_data)
 {
     wiced_bt_gatt_status_t result = WICED_BT_SUCCESS;
 
-    FUNCTION_PRINT(( "hello_client_gatt_callback event %d \n", event ));
+    FUNCTION_PRINT(( "ble_subscriber_gatt_callback event %d \n", event ));
 
     switch( event )
     {
@@ -242,23 +247,25 @@ wiced_bt_gatt_status_t hello_client_gatt_callback( wiced_bt_gatt_evt_t event, wi
             if ( p_data->connection_status.connected )
             {
             		FUNCTION_PRINT(("GATT_CONNECTION_STATUS_EVT connected\n"));
-                result = hello_client_gatt_connection_up( &p_data->connection_status );
+                result = ble_subscriber_gatt_connection_up( &p_data->connection_status );
             }
             else
             {
             		FUNCTION_PRINT(("GATT_CONNECTION_STATUS_EVT Disconnected\n"));
-                result = hello_client_gatt_connection_down( &p_data->connection_status );
+                result = ble_subscriber_gatt_connection_down( &p_data->connection_status );
             }
             break;
-
+#if 0
         case GATT_OPERATION_CPLT_EVT:
         		FUNCTION_PRINT(("GATT_OPERATION_CPLT_EVT\n"));
-            result = hello_client_gatt_op_comp_cb( &p_data->operation_complete );
+            result = ble_subscriber_gatt_op_comp_cb( &p_data->operation_complete );
             break;
-
+#endif
+#if 0
         case GATT_ATTRIBUTE_REQUEST_EVT:
             WPRINT_BT_APP_INFO(("received GATT_ATTRIBUTE_REQUEST_EVT\n" ));
             break;
+#endif
 
         default:
             break;
@@ -269,7 +276,7 @@ wiced_bt_gatt_status_t hello_client_gatt_callback( wiced_bt_gatt_evt_t event, wi
 
 /* This function will be called on every connection establishment */
 /* This function is invoked when connection is established */
-wiced_bt_gatt_status_t hello_client_gatt_connection_up( wiced_bt_gatt_connection_status_t *p_conn_status )
+wiced_bt_gatt_status_t ble_subscriber_gatt_connection_up( wiced_bt_gatt_connection_status_t *p_conn_status )
 {
     uint8_t dev_role;
 
@@ -278,21 +285,21 @@ wiced_bt_gatt_status_t hello_client_gatt_connection_up( wiced_bt_gatt_connection
     wiced_bt_dev_get_role( p_conn_status->bd_addr, &dev_role, BT_TRANSPORT_LE );
 
     // Adding the peer info
-    if ( g_hello_client.peer_info.conn_id == 0 )
+    if ( g_ble_subscriber.peer_info.conn_id == 0 )
        {
-           g_hello_client.peer_info.conn_id         =  p_conn_status->conn_id;
-           g_hello_client.peer_info.role            = dev_role;
-           g_hello_client.peer_info.transport       = p_conn_status->transport;
-           g_hello_client.peer_info.addr_type       = p_conn_status->addr_type;
-           memcpy( g_hello_client.peer_info.peer_addr, p_conn_status->bd_addr, BD_ADDR_LEN );
+           g_ble_subscriber.peer_info.conn_id         =  p_conn_status->conn_id;
+           g_ble_subscriber.peer_info.role            = dev_role;
+           g_ble_subscriber.peer_info.transport       = p_conn_status->transport;
+           g_ble_subscriber.peer_info.addr_type       = p_conn_status->addr_type;
+           memcpy( g_ble_subscriber.peer_info.peer_addr, p_conn_status->bd_addr, BD_ADDR_LEN );
        }
 
-    WPRINT_BT_APP_INFO(( "hclient_connection_up Conn Id:%d Addr:<%X:%X:%X:%X:%X:%X> role:%d\n ", p_conn_status->conn_id,
+    WPRINT_BT_APP_INFO(( "P6 Robot Connection Complete Conn Id:%d Addr:<%X:%X:%X:%X:%X:%X> role:%d\n", p_conn_status->conn_id,
         p_conn_status->bd_addr[0], p_conn_status->bd_addr[1], p_conn_status->bd_addr[2],
         p_conn_status->bd_addr[3], p_conn_status->bd_addr[4], p_conn_status->bd_addr[5],
         dev_role ));
 
-    g_hello_client.conn_id = p_conn_status->conn_id;
+    g_ble_subscriber.conn_id = p_conn_status->conn_id;
 
     wiced_gpio_output_high(WICED_LED1);
     wiced_gpio_output_low(WICED_LED2);
@@ -301,19 +308,19 @@ wiced_bt_gatt_status_t hello_client_gatt_connection_up( wiced_bt_gatt_connection
 }
 
 /* This function will be called when connection goes down */
-wiced_bt_gatt_status_t hello_client_gatt_connection_down( wiced_bt_gatt_connection_status_t *p_conn_status )
+wiced_bt_gatt_status_t ble_subscriber_gatt_connection_down( wiced_bt_gatt_connection_status_t *p_conn_status )
 {
-	FUNCTION_PRINT(( "hello_client_connection_down <%X:%X:%X:%X:%X:%X>\n", p_conn_status->bd_addr[0], p_conn_status->bd_addr[1], p_conn_status->bd_addr[2],
+	FUNCTION_PRINT(( "ble_subscriber_connection_down <%X:%X:%X:%X:%X:%X>\n", p_conn_status->bd_addr[0], p_conn_status->bd_addr[1], p_conn_status->bd_addr[2],
             p_conn_status->bd_addr[3], p_conn_status->bd_addr[4], p_conn_status->bd_addr[5] ));
 
 
-    if ( g_hello_client.peer_info.conn_id == p_conn_status->conn_id )
+    if ( g_ble_subscriber.peer_info.conn_id == p_conn_status->conn_id )
     {
-        g_hello_client.peer_info.conn_id = 0;
+        g_ble_subscriber.peer_info.conn_id = 0;
     }
 
     // Start Scanning Again
-    wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, hello_client_scan_result_cback );
+    wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, ble_subscriber_scan_result_cback );
 
     wiced_gpio_output_low(WICED_LED1);
     wiced_gpio_output_high(WICED_LED2);
@@ -321,13 +328,14 @@ wiced_bt_gatt_status_t hello_client_gatt_connection_down( wiced_bt_gatt_connecti
     return WICED_BT_GATT_SUCCESS;
 }
 
+#if 0
 /*
  * GATT operation started by the client has been completed
  */
-wiced_bt_gatt_status_t hello_client_gatt_op_comp_cb( wiced_bt_gatt_operation_complete_t *p_data )
+wiced_bt_gatt_status_t ble_subscriber_gatt_op_comp_cb( wiced_bt_gatt_operation_complete_t *p_data )
 {
 
-	FUNCTION_PRINT(("hello_client_gatt_op_comp_cb conn %d op %d st %d\n", p_data->conn_id, p_data->op, p_data->status ));
+	FUNCTION_PRINT(("ble_subscriber_gatt_op_comp_cb conn %d op %d st %d\n", p_data->conn_id, p_data->op, p_data->status ));
 
     switch ( p_data->op )
     {
@@ -345,13 +353,13 @@ wiced_bt_gatt_status_t hello_client_gatt_op_comp_cb( wiced_bt_gatt_operation_com
     }
     return WICED_BT_GATT_SUCCESS;
 }
-
+#endif
 
 
 /*
  * This function handles the scan results
  */
-void hello_client_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result, uint8_t *p_adv_data )
+void ble_subscriber_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result, uint8_t *p_adv_data )
 {
 	uint8_t                length;
 	uint8_t *              p_data;
@@ -375,7 +383,7 @@ void hello_client_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result,
 		WPRINT_BT_APP_INFO(("Found P6 Robot & Motor Service\n"));
 
 		/* Stop the scan since the desired device is found */
-		wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_NONE, WICED_TRUE, hello_client_scan_result_cback );
+		wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_NONE, WICED_TRUE, ble_subscriber_scan_result_cback );
 
 		FUNCTION_PRINT(( "scan off status %d\n", status ));
 
@@ -388,9 +396,9 @@ void hello_client_scan_result_cback( wiced_bt_ble_scan_results_t *p_scan_result,
 
 
 
-void hello_client_write_motor_m1 ( uint8_t val )
+void ble_subscriber_write_motor_m1 ( uint8_t val )
 {
-	if(g_hello_client.conn_id == 0)
+	if(g_ble_subscriber.conn_id == 0)
 		return;
 
 	WPRINT_BT_APP_INFO(("Motor M1=0x%02X\n", val));
@@ -403,13 +411,13 @@ void hello_client_write_motor_m1 ( uint8_t val )
 	p_write->auth_req = GATT_AUTH_REQ_NONE;
 	p_write->value[0] = val;
 
-	wiced_bt_gatt_send_write ( g_hello_client.conn_id, GATT_WRITE_NO_RSP, p_write );
+	wiced_bt_gatt_send_write ( g_ble_subscriber.conn_id, GATT_WRITE_NO_RSP, p_write );
 
 }
 
-void hello_client_write_motor_m2 ( uint8_t val )
+void ble_subscriber_write_motor_m2 ( uint8_t val )
 {
-	if(g_hello_client.conn_id == 0)
+	if(g_ble_subscriber.conn_id == 0)
 			return;
 
 	WPRINT_BT_APP_INFO(("Wrote Motor M2=0x%02X\n", val));
@@ -423,7 +431,7 @@ void hello_client_write_motor_m2 ( uint8_t val )
 	p_write->auth_req = GATT_AUTH_REQ_NONE;
 	p_write->value[0] = val;
 
-	wiced_bt_gatt_send_write ( g_hello_client.conn_id, GATT_WRITE_NO_RSP, p_write );
+	wiced_bt_gatt_send_write ( g_ble_subscriber.conn_id, GATT_WRITE_NO_RSP, p_write );
 
 
 }
