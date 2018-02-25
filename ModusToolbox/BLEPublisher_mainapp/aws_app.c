@@ -46,9 +46,11 @@ static wiced_bool_t connected = WICED_FALSE;
  ******************************************************/
 
 
-void aws_start( void )
+wiced_result_t aws_start( void )
 {
 	wiced_result_t ret = WICED_SUCCESS;
+	uint32_t size_out;
+
 	WPRINT_APP_INFO(("Starting AWS - Publisher\n"));
 
 	/* Disable roaming to other access points */
@@ -61,14 +63,6 @@ void aws_start( void )
 			WPRINT_APP_INFO(("Failed to network up\n"));
 	} while(ret != WICED_SUCCESS);
 
-	aws_init();
-}
-
-
-wiced_result_t aws_init()
-{
-	wiced_result_t ret;
-	uint32_t size_out;
 
 	do {
 	WPRINT_APP_INFO( ( "Resolving IP address of AWS cloud...%s\n", WICED_AWS_IOT_HOST_NAME ) );

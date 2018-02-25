@@ -64,8 +64,6 @@ wiced_result_t aws_start( void )
 {
 	wiced_result_t ret = WICED_SUCCESS;
 	uint32_t size_out;
-
-	WPRINT_APP_INFO(("Starting AWS\n"));
 	/* Disable roaming to other access points */
 	wiced_wifi_set_roam_trigger( -99 ); /* -99dBm ie. extremely low signal level */
 

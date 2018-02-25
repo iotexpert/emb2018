@@ -93,6 +93,9 @@ void application_start( )
 	wiced_init();
     wiced_gpio_output_low(WICED_LED1);
     wiced_gpio_output_high(WICED_LED2);
+
+	WPRINT_APP_INFO(("Starting AWS ---- Subscriber\n"));
+
     aws_start();
     wiced_bt_stack_init( ble_subscriber_management_cback, &wiced_bt_cfg_settings, wiced_bt_cfg_buf_pools );
 }

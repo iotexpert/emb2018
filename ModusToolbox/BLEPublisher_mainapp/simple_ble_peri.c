@@ -120,15 +120,15 @@ PRIMARY_SERVICE_UUID128( HANDLE_MOTOR_SERVICE, UUID_MOTOR_SERVICE ),
    CHARACTERISTIC_UUID128_WRITABLE( HANDLE_MOTOR_M1,
                    HANDLE_MOTOR_M1_VAL,
                    UUID_MOTOR_M1,
-                   (LEGATTDB_CHAR_PROP_WRITE|LEGATTDB_CHAR_PROP_READ ),
-                   (LEGATTDB_PERM_READABLE | LEGATTDB_PERM_WRITE_REQ  ) ),
+                   (LEGATTDB_CHAR_PROP_WRITE ),
+                   (LEGATTDB_PERM_WRITE_REQ  ) ),
 
                                            /* Declare characteristic Hello Configuration */
    CHARACTERISTIC_UUID128_WRITABLE( HANDLE_MOTOR_M2,
                    HANDLE_MOTOR_M2_VAL,
                    UUID_MOTOR_M2,
-                   (LEGATTDB_CHAR_PROP_WRITE|LEGATTDB_CHAR_PROP_READ ),
-                   (LEGATTDB_PERM_READABLE | LEGATTDB_PERM_WRITE_REQ )),
+                   (LEGATTDB_CHAR_PROP_WRITE ),
+                   (LEGATTDB_PERM_WRITE_REQ )),
 
 
 };
@@ -225,12 +225,7 @@ static wiced_result_t simple_ble_peri_management_callback( wiced_bt_management_e
 
 	case BTM_BLE_ADVERT_STATE_CHANGED_EVT:
 		p_mode = &p_event_data->ble_advert_state_changed;
-		FUNCTION_PRINT(( "Advertisement State Change: %s = %d \n", getEventEnumBTM_BLE_ADVERT(*p_mode),*p_mode));
-		if ( *p_mode == BTM_BLE_ADVERT_OFF )
-		{
-			if (simple_ble_peri_state.conn_id == 0)
-				wiced_bt_start_advertisements( BTM_BLE_ADVERT_UNDIRECTED_LOW, 0, NULL );
-		}
+		WPRINT_APP_INFO(( "Advertisement State Change: %s = %d \n", getEventEnumBTM_BLE_ADVERT(*p_mode),*p_mode));
 		break;
 
 	default:
