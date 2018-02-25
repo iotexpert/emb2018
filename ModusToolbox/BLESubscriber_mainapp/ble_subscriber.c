@@ -114,15 +114,10 @@ wiced_result_t ble_subscriber_management_cback( wiced_bt_management_evt_t event,
 	{
 	/* Bluetooth  stack enabled */
 	case BTM_ENABLED_EVT:
-	    memset( &g_ble_subscriber, 0, sizeof( g_ble_subscriber ) );
-	    wiced_bt_gatt_register( ble_subscriber_gatt_callback );
-
-		//start looking for hello sensor
-		if( wiced_bt_ble_get_current_scan_state() == BTM_BLE_SCAN_TYPE_NONE )
-		{
-			result = wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, ble_subscriber_scan_result_cback );
-			FUNCTION_PRINT(( "ble_subscriber_start_scan: %d\n", result ));
-		}
+		memset( &g_ble_subscriber, 0, sizeof( g_ble_subscriber ) );
+		wiced_bt_gatt_register( ble_subscriber_gatt_callback );
+		result = wiced_bt_ble_scan( BTM_BLE_SCAN_TYPE_HIGH_DUTY, WICED_TRUE, ble_subscriber_scan_result_cback );
+		FUNCTION_PRINT(( "ble_subscriber_start_scan: %d\n", result ));
 		break;
 
 	case BTM_BLE_SCAN_STATE_CHANGED_EVT:
