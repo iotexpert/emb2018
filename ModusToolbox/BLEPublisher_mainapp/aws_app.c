@@ -121,13 +121,58 @@ wiced_result_t aws_start( void )
 }
 
 
+void aws_reconnect()
+{
+
+	wiced_aws_connection_close(&app_info);
+
+	wiced_result_t ret;
+	do {
+			WPRINT_APP_INFO( ("[AWS] Opening connection... ") );
+			ret = wiced_aws_connection_open( &app_info, callbacks, &connection_parameters );
+			if(ret == WICED_SUCCESS)
+			{
+				WPRINT_APP_INFO(("Success\n"));
+				connected = 1;
+			}
+				else
+			{
+				wiced_rtos_delay(100);
+				WPRINT_APP_INFO(("Failed\n"));
+			}
+		} while (ret != WICED_SUCCESS);
+}
+
 void robot_publish(char *message)
 {
-	if(connected == WICED_FALSE)
+	static int pub_in_progress = 0;
+	wiced_result_t result;
+	int retry=0;
+
+	if(connected == WICED_FALSE || pub_in_progress)
 		return;
 
 	WPRINT_APP_INFO(("Message = %s\n",message));
-	wiced_aws_publish( &app_info, WICED_MQTT_QOS_DELIVER_AT_MOST_ONCE, (uint8_t*)WICED_TOPIC,(uint8_t *)message,(uint32_t)strlen(message));
+	do {
+		pub_in_progress = 1;
+		result = wiced_aws_publish( &app_info, WICED_MQTT_QOS_DELIVER_AT_LEAST_ONCE, (uint8_t*)WICED_TOPIC,(uint8_t *)message,(uint32_t)strlen(message));
+		retry += 1;
+	} while(retry <5 && result != WICED_SUCCESS);
+
+
+	if(result != WICED_SUCCESS)
+	{
+		connected = 0;
+		pub_in_progress = 0;
+		WPRINT_APP_INFO(("Publish failed\n"));
+		// Reconnect
+		aws_reconnect();
+	}
+	else
+	{
+		pub_in_progress = 0;
+	}
+
 }
 
 
@@ -137,6 +182,7 @@ static wiced_result_t aws_data_callback( void *app_info, wiced_aws_event_type_t 
 	switch ( event_type )
 	{
 	case WICED_AWS_EVENT_TYPE_DISCONNECTED:
+			WPRINT_APP_INFO(("WICED_AWS_EVENT_TYPE_DISCONNECTED\n"));
 		break;
 	case WICED_AWS_EVENT_TYPE_DATA_RECEIVED: // Only publishing
 	break;
