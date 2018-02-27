@@ -435,4 +435,5 @@
 		<device Dcore="Cortex-M4" DcoreVersion="r0p1" Dendian="Little-endian" Dfamily="PSoC 62" Dfpu="SP_FPU" Dmpu="MPU" Dname="CY8C6247BZI-D54" Dvendor="Cypress:19" Pname="CortexM4" info="ARM Cortex-M4" url="http://www.keil.com/dd2/cypress/cy8c6247bzi_d54"/>
 	</storageModule>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>
